@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <img src="/media/spotify-image.JPG" class="center">
+</head>
+<body>
+    <div class="content">
+
+        <div class="row">
+          <div class="col-xs-12">
+            <a ng-href="https://www.facebook.com/v7.0/dialog/oauth?client_id=174829003346&amp;state=AQAjwq6%2B2m8cXEAbqZDdpYAxrbhdb4bQ3WxORchK%2BO115oUz0XYJGxypNY9cB5lbam3mhB%2F%2FrE2sbsK1gGKn%2Be6X%2BGIGVHJTN8N47GdoKnu3dWCoBsUKwTQSV1vfnLWKD48CNIS%2Fc8KEdXUYfyQ%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Ffacebook%2Fredirect" class="btn btn-block btn-facebook ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Facebook Button" analytics-label="{{" clientid="" }}="" href="https://www.facebook.com/v7.0/dialog/oauth?client_id=174829003346&amp;state=AQAjwq6%2B2m8cXEAbqZDdpYAxrbhdb4bQ3WxORchK%2BO115oUz0XYJGxypNY9cB5lbam3mhB%2F%2FrE2sbsK1gGKn%2Be6X%2BGIGVHJTN8N47GdoKnu3dWCoBsUKwTQSV1vfnLWKD48CNIS%2Fc8KEdXUYfyQ%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Ffacebook%2Fredirect">Sign in with Facebook</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <a ng-href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQAjwq6%2B2m8cXEAbqZDdpYAxrbhdb4bQ3WxORchK%2BO115oUz0XYJGxypNY9cB5lbam3mhB%2F%2FrE2sbsK1gGKn%2Be6X%2BGIGVHJTN8N47GdoKnu3dWCoBsUKwTQSV1vfnLWKD48CNIS%2Fc8KEdXUYfyQ%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect" class="btn btn-block btn-black btn-apple ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Apple Button" analytics-label="{{" clientid="" }}="" href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQAjwq6%2B2m8cXEAbqZDdpYAxrbhdb4bQ3WxORchK%2BO115oUz0XYJGxypNY9cB5lbam3mhB%2F%2FrE2sbsK1gGKn%2Be6X%2BGIGVHJTN8N47GdoKnu3dWCoBsUKwTQSV1vfnLWKD48CNIS%2Fc8KEdXUYfyQ%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect">Continue with Apple</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <a ng-href="/en/login/google" class="btn btn-block btn-default btn-google ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Google Button" analytics-label="{{" clientid="" }}="" href="/en/login/google">Continue with Google</a>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="divider">
+              <strong class="divider-title ng-binding">or</strong>
+            </div>
+          </div>
+        </div>
+    
+        <form name="$parent.accounts" method="post" novalidate="" class="ng-pristine ng-valid-sp-disallow-chars ng-invalid ng-invalid-required">
+    
+          <div class="row" ng-class="{'has-error': (accounts.username.$dirty &amp;&amp; accounts.username.$invalid) || invalidCredentials}">
+            <div class="col-xs-12">
+              <label for="login-username" class="control-label ng-binding">
+                Email address or username
+              </label>
+              <input ng-model="form.username" type="text" class="form-control input-with-feedback ng-pristine ng-valid-sp-disallow-chars ng-empty ng-invalid ng-invalid-required ng-touched" name="username" id="login-username" placeholder="Email address or username" required="" sp-disallow-chars=":%&amp;'`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false" ng-change="onInputChange()">
+              <!-- ngIf: accounts.username.$dirty && accounts.username.$invalid -->
+            </div>
+          </div>
+    
+          <div class="row" ng-class="{'has-error': (accounts.password.$dirty &amp;&amp; accounts.password.$invalid) || invalidCredentials}">
+            <div class="col-xs-12">
+              <label for="login-password" class="control-label ng-binding">
+                Password
+              </label>
+              <input ng-model="form.password" type="password" class="form-control input-with-feedback ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="password" id="login-password" placeholder="Password" required="" autocomplete="off" ng-trim="false" ng-change="onInputChange()">
+              <!-- ngIf: accounts.password.$dirty && accounts.password.$invalid -->
+            </div>
+          </div>
+    
+          <!-- ngIf: showAutomationKey -->
+    
+              <div class="row password-reset">
+                <div class="col-xs-12">
+                  <p>
+                    <a id="reset-password-link" ng-href="https://www.spotify.com/password-reset/" analytics-on="click" analytics-category="Login View" analytics-event="Forgot Button" analytics-label="" class="ng-binding" href="https://www.spotify.com/password-reset/">Forgot your password?</a>
+                  </p>
+                </div>
+              </div>
+    
+          <div class="row row-submit">
+            <div class="col-xs-12 col-sm-6">
+              <div class="checkbox">
+                <label class="ng-binding">
+                  <input ng-model="form.remember" type="checkbox" name="remember" analytics-on="checked" analytics-category="Login View" id="login-remember" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                  Remember me
+                  <span class="control-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <button class="btn btn-block btn-green ng-binding" id="login-button" ng-click="onLoginClick($event)">Log In</button>
+            </div>
+          </div>
+        </form>
+    
+        <div id="sign-up-section">
+          <div class="row">
+            <div class="col-xs-12">
+              <signup class="ng-isolate-scope"><!-- ngIf: showSignup --><div ng-if="showSignup" class="ng-scope">
+        <!-- ngIf: showButton --><div ng-if="showButton" class="ng-scope">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="divider">
+                        <!-- ngIf: showOrLabel -->
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center mt-0">
+                <h2 class="h4 ng-binding">Don't have an account?</h2>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a id="sign-up-link" ng-click="onSignupClick()" ng-href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus" class="btn btn-block btn-default ng-binding" role="button" href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus">Sign up for Spotify</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end ngIf: showButton -->
+    
+        <!-- ngIf: showAppStoreBanner -->
+    </div><!-- end ngIf: showSignup -->
+    </signup>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+</body>
+</html>
