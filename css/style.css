@@ -1,5 +1,6 @@
 /* Example */
 
+
 /*------------------------------------*\
                 #sidebar
 \*------------------------------------*/
@@ -7,11 +8,13 @@
 
 /* classnames .class example of a modul */
 
+
 /* .sidebar {} 
 .sidebar-title {}
 .sidebar-item {}
 .sidebar-productTitle {}
 .sidebar-removeButton {} */
+
 
 /*------------------------------------*\
                 #footer
@@ -19,6 +22,7 @@
 
 
 /* .footer-playButton{} */
+
 
 /* Example */
 
@@ -37,48 +41,46 @@
 }
 
 
-
 /*------------------------------------*\
                 #homepage
 \*------------------------------------*/
-#body {
-  font-family: 'Montserrat', sans-serif;
 
-  background: rgb(10, 16, 23);
-  background: radial-gradient(
-    circle,
-    rgba(10, 16, 23, 1) 0%,
-    rgba(25, 50, 77, 1) 91%
-  );
+#body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(10, 16, 23);
+    background: radial-gradient( circle, rgba(10, 16, 23, 1) 0%, rgba(25, 50, 77, 1) 91%);
 }
+
 nav {
-  letter-spacing: 0.15em;
-  font-size: 9px;
+    letter-spacing: 0.15em;
+    font-size: 9px;
 }
+
 h1 {
-  color: white;
+    color: white;
 }
+
 #img-card {
-  padding-left: 7px;
-  padding-right: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
+
 #card-text {
-  color: white;
-  font-size: 12px;
+    color: white;
+    font-size: 12px;
 }
 
 h2 {
-  color: white;
+    color: white;
 }
 
 #underline {
-  /* text-decoration: underline;
+    /* text-decoration: underline;
   text-underline-position: under;
 
   text-decoration-color: #219163; */
-
-  border-bottom: 2px solid #219163;
-  padding-bottom: 3px;
+    border-bottom: 2px solid #219163;
+    padding-bottom: 3px;
 }
 
 
@@ -111,7 +113,6 @@ h2 {
 .player {
     margin-left: -15px;
     margin-right: -15px;
-    width: 100vw;
     height: 8vh;
     background-color: var(--footer-bg-color)
 }
@@ -125,7 +126,7 @@ h2 {
 }
 
 .player-preview-text {
-    line-height: 23px;
+    line-height: 1.2em;
 }
 
 .player .player-progress-divider {
@@ -142,5 +143,3 @@ h2 {
     height: 2px;
     background-color: var(--footer-player-text-color)
 }
-
-
