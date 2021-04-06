@@ -19,15 +19,13 @@
 <body>
     <!-- main -->
     <div class="container-fluid">
-
-
         <!-- Start sidebar -->
-        <div class="row flex-xl-nowrap">
+        <div class="row">
             <!-- Start sidebar -->
-            <div class="sidebar bd-sidebar col-md-3 col-xl-2 d-flex flex-column">
+            <div class="sidebar bd-sidebar col-md-2 col-xl-3 d-flex flex-column">
                 <ul class="navbar-nav text-light ml-2">
                     <li class="nav-item mt-4">
-                        <div><img class="" src="./assets/img/spotify-1-logo-black-and-white.png" alt="" style="height:40px"></div>
+                        <div><img class="img-fluid" src="./assets/img/spotify-1-logo-black-and-white.png" alt="" style="max-height:40px"></div>
                     </li>
                     <li class="nav-item mt-3">
                         <div>
@@ -46,7 +44,7 @@
                         </div>
                     </li>
                 </ul>
-                <!-- foot -->
+                <!-- foot sidebar -->
                 <ul class="navbar-nav mt-auto mb-4 ml-2">
                     <li class="nav-item">
                         <div>
@@ -63,7 +61,7 @@
                         </div>
                     </li>
                 </ul>
-
+                <!-- foot sidebar -->
 
             </div>
             <!-- End sidebar -->
@@ -72,10 +70,10 @@
 
         <!-- Start playerfooter -->
         <footer class="player">
-            <div class="row d-flex align-items-center">
+            <div class="row d-flex align-items-center mr-0">
                 <!--Start Preview -->
-                <div class="col d-flex flex-row align-items-center m-2 ml-3">
-                    <img src="/assets/img/player-preview.jpg" alt="" style="width:59px;">
+                <div class="col d-flex flex-row align-items-center ml-3">
+                    <img class="img-fluid" src="/assets/img/player-preview.jpg" alt="" style="max-width: 15%">
                     <div class="player-preview-text d-flex flex-column mx-2">
                         <span class="text-white">Song For My Father</span>
                         <span class="text-muted">Horace Silverman</span>
@@ -86,7 +84,7 @@
                     </div>
                 </div>
                 <!-- End Preview  -->
-                <!-- Start Player -->
+                <!-- Start Playercontrols -->
                 <div class="col d-flex flex-column align-items-center">
                     <div class="row">
                         <div class="player-controls d-flex col mt-2 align-items-center">
@@ -97,21 +95,21 @@
                             <ion-icon class="mx-2" name="repeat"></ion-icon>
                         </div>
                     </div>
-                    <div class="player-song-progress row mb-2">
+                    <div class="player-song-progress row">
                         <div class="col d-flex align-items-center">
                             <span class="mx-2">0:00</span>
-                            <hr class="player-progress-divider" style="width:400px" , size="3" , color=var(--sidebar-text-color)>
+                            <hr class="player-progress-divider m-0" style="width:400px" , size="3" , color=var(--sidebar-text-color)>
                             <span class="mx-2">7:18</span>
                         </div>
                     </div>
                 </div>
-                <!-- End Player -->
+                <!-- End Playercontrols -->
                 <!-- Start Volume -->
-                <div class="col player-controls d-flex justify-content-end align-items-center mr-5">
+                <div class="col player-controls d-flex justify-content-end align-items-center">
                     <ion-icon class="mx-2" name="reorder-four-outline"></ion-icon>
                     <ion-icon class="mx-2" name="laptop-outline"></ion-icon>
                     <ion-icon class="mx-2" name="volume-high-outline"></ion-icon>
-                    <hr class="player-volume-bar m-0 ml-2" style="width:20%" , size="3" , color=var(--footer-player-text-color)>
+                    <hr class="player-volume-bar m-0 ml-2 mr-4" style="width:20%" , size="3" , color=var(--footer-player-text-color)>
                 </div>
                 <!-- End Volume -->
             </div>
