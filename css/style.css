@@ -92,7 +92,7 @@ h2 {
     background-color: var(--home-bg-color);
     color: var(--sidebar-text-color);
     font-weight: 700;
-    height: 92vh;
+    height: 90vh;
 }
 
 .sidebar ul li span {
@@ -113,7 +113,7 @@ h2 {
 .player {
     margin-left: -15px;
     margin-right: -15px;
-    height: 8vh;
+    height: 10vh;
     background-color: var(--footer-bg-color)
 }
 
@@ -142,4 +142,21 @@ h2 {
 .player .player-volume-bar {
     height: 2px;
     background-color: var(--footer-player-text-color)
+}
+
+
+/*------------------------------------*\
+                #media queries
+\*------------------------------------*/
+
+@media screen and (max-height:900px) {
+    .player {
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-height:901px) {
+    .player {
+        padding-top: 1vh;
+    }
 }
