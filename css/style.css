@@ -1,6 +1,5 @@
 /* Example */
 
-
 /*------------------------------------*\
                 #sidebar
 \*------------------------------------*/
@@ -8,13 +7,11 @@
 
 /* classnames .class example of a modul */
 
-
 /* .sidebar {} 
 .sidebar-title {}
 .sidebar-item {}
 .sidebar-productTitle {}
 .sidebar-removeButton {} */
-
 
 /*------------------------------------*\
                 #footer
@@ -22,7 +19,6 @@
 
 
 /* .footer-playButton{} */
-
 
 /* Example */
 
@@ -38,6 +34,51 @@
     --sidebar-text-color: #A6A6A6;
     --footer-bg-color: #282828;
     --footer-player-text-color: #B3B3B3;
+}
+
+
+
+/*------------------------------------*\
+                #homepage
+\*------------------------------------*/
+#body {
+  font-family: 'Montserrat', sans-serif;
+
+  background: rgb(10, 16, 23);
+  background: radial-gradient(
+    circle,
+    rgba(10, 16, 23, 1) 0%,
+    rgba(25, 50, 77, 1) 91%
+  );
+}
+nav {
+  letter-spacing: 0.15em;
+  font-size: 9px;
+}
+h1 {
+  color: white;
+}
+#img-card {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+#card-text {
+  color: white;
+  font-size: 12px;
+}
+
+h2 {
+  color: white;
+}
+
+#underline {
+  /* text-decoration: underline;
+  text-underline-position: under;
+
+  text-decoration-color: #219163; */
+
+  border-bottom: 2px solid #219163;
+  padding-bottom: 3px;
 }
 
 
@@ -102,6 +143,4 @@
     background-color: var(--footer-player-text-color)
 }
 
-                #sidebar
-\*------------------------------------*/
 
