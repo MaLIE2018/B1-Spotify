@@ -141,6 +141,8 @@ h2 {
     margin-left: -15px;
     margin-right: -15px;
     height: 10vh;
+    position: sticky;
+    bottom: 0;
     background-color: var(--footer-bg-color)
 }
 
@@ -154,6 +156,10 @@ h2 {
 
 .player-preview-text {
     line-height: 1.2em;
+    text-overflow: ellipsis;
+    /*truncates the text over 80px overflow with three ...*/
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .player .player-progress-divider {
@@ -171,6 +177,10 @@ h2 {
     background-color: var(--footer-player-text-color)
 }
 
+.player-progress-divider {
+    width: 400px;
+}
+
 
 /*------------------------------------*\
                 #Artist page
@@ -180,6 +190,9 @@ h2 {
     background-color: var(--artist-section-bg-color)
 }
 
+
+/* Header */
+
 .artist-header {
     color: var(--sidebar-text-color);
 }
@@ -188,22 +201,66 @@ h2 {
     font-size: 96px;
 }
 
+
+/* En Header */
+
+
+/* Button Row */
+
 .artist-followButton {
     border: 2px solid var(--sidebar-text-color);
     color: var(--sidebar-text-color);
     font-weight: 700;
-    /* transition: all 0.2s ease-in-out; */
+    transition: all 0.2s ease
+}
+
+.artist-followButton:hover {
+    background-color: var(--sidebar-text-color);
+    transform: scale(1.05);
 }
 
 .artist-playButton {
     color: var(--login-bg-color);
     font-weight: 700;
     background-color: var(--spotify-color);
+    transition: all 0.2s ease
+}
+
+.artist-playButton:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.artist-menuButton:hover {
+    transform: scale(1.10);
 }
 
 .artist-header-button-row {
     color: var(--sidebar-text-color);
 }
+
+
+/* End Button Row */
+
+
+/* Menubar */
+
+.artist-header ul li {
+    cursor: pointer;
+    padding-bottom: 4px;
+    font-weight: 700;
+}
+
+.artist-header ul li:hover {
+    border-bottom: 1px solid var(--spotify-color);
+    color: var(--login-bg-color)
+}
+
+
+/* End Menubar */
+
+
+/* Album */
 
 .artist-album-card {
     background-color: var(--artist-album-card-bg-color);
@@ -257,9 +314,8 @@ section.artist-albums h3 {
     font-weight: 700;
 }
 
-section.artist-albums img {
-    width: 236px;
-}
+
+/* End Album */
 
 
 /*------------------------------------*\
@@ -268,12 +324,33 @@ section.artist-albums img {
 
 @media screen and (max-height:900px) {
     .player {
-        padding-top: 0;
+        padding-top: 1vh;
     }
 }
 
 @media screen and (min-height:901px) {
     .player {
         padding-top: 1vh;
+    }
+}
+
+@media (max-width: 962px) {
+    .sidebar .navbar-nav li span {
+        font-size: 0.8rem;
+    }
+    .player-progress-divider {
+        width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        height: 30vh;
+    }
+    .player {
+        height: 15vh;
+    }
+    .player-progress-divider {
+        width: 75vw;
     }
 }
