@@ -66,6 +66,8 @@ h1 {
 #img-card {
   padding-left: 7px;
   padding-right: 7px;
+  background-color: transparent;
+  border: none;
 }
 
 #card-text {
@@ -98,6 +100,9 @@ h2 {
   color: var(--sidebar-text-color);
   font-weight: 700;
   height: 90vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .sidebar ul li span {
@@ -143,6 +148,7 @@ h2 {
   margin-right: -15px;
   height: 10vh;
   position: sticky;
+
   bottom: 0;
   background-color: var(--footer-bg-color);
 }
