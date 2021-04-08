@@ -14,3 +14,10 @@ const showFavoritArtistpage = (event) => {
     }, 200)
 
 }
+
+
+const showAlbumpage = () => {
+    document.querySelector('.artist-section').classList.add('d-none')
+    document.querySelector('.album-section').classList.remove('d-none')
+
+}
