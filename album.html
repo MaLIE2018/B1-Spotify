@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7294573315.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Spotify</title>
+  
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- Start sidebar -->
+    <div class="row">
+        <!-- Start sidebar -->
+        <div class="sidebar d-none col-12 col-sm-1 col-md-2 col-xl-3 d-flex flex-column sticky-top">
+            <ul class="sidebar-top-nav navbar-nav text-light ml-2">
+                <li class="nav-item mt-8">
+                    <div class="d-flex flex-row align-items-center">
+                        <img class="img-fluid d-sm-none d-md-block" src="./assets/img/spotify-1-logo-black-and-white.png" alt="" style="max-height:40px">
+                        <div class="sidebar-dropdown-trigger ml-auto d-inline-block d-sm-none">
+                            <button class="navbar-toggler">
+                                <ion-icon name="menu-outline"></ion-icon>
+                            </button>
+                            <div class="sidebar-dropdown fixed-top">
+                                <div class="p-4">
+                                    <div class="mt-3">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Home</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <ion-icon name="search-outline"></ion-icon>
+                                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Search</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <ion-icon class="player-controls" name="library-outline"></ion-icon>
+                                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Your Libary</span>
+                                    </div>
+                                    <hr class="sidebar-devider" style="width:100%" , size="3" , color=var(--sidebar-text-color)>
+                                    <div class="mt-3">
+                                        <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Install App</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <img class="rounded-circle" src="./assets/img/DSC09736cut.jpg" alt="" style="width:29px">
+                                        <span class="ml-lg-1 ml-1 text-white d-sm-none d-md-inline-block d-lg-inline-block">Maximilian Liebsch</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <img class="img-fluid d-none d-sm-block d-md-none " src="./assets/img/spotify_logo_whit_wt.png" alt="" style="max-height:40px">
+                    <!-- smartphone small screen collapse -->
+
+                    <!-- end smartphone small screen collapse -->
+                </li>
+                <li class="nav-item mt-3 d-none d-sm-inline">
+                    <div>
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Home</span>
+                    </div>
+                </li>
+                <li class="nav-item mt-3 d-none d-sm-inline">
+                    <div>
+                        <ion-icon name="search-outline"></ion-icon>
+                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Search</span>
+                    </div>
+                </li>
+                <li class="nav-item mt-3 d-none d-sm-inline">
+                    <div>
+                        <ion-icon class="player-controls" name="library-outline"></ion-icon>
+                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Your Libary</span>
+                    </div>
+                </li>
+            </ul>
+            <!-- foot sidebar -->
+            <ul class="navbar-nav mt-0 mt-sm-auto mb-4 ml-2 d-none d-sm-inline">
+                <li class="nav-item mt-3">
+                    <div>
+                        <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                        <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Install App</span>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <hr class="sidebar-devider" style="width:100%" , size="3" , color=var(--sidebar-text-color)>
+                </li>
+                <li class="nav-item">
+                    <div>
+                        <img class="rounded-circle" src="./assets/img/DSC09736cut.jpg" alt="" style="width:29px">
+                        <span class="ml-lg-1 ml-1 text-white d-sm-none d-md-inline-block d-lg-inline-block">Maximilian Liebsch</span>
+                    </div>
+                </li>
+            </ul>
+            <!-- foot sidebar -->
+            <!-- Start foot sidebar with buttons -->
+            <!-- <ul class="navbar-nav mt-auto mb-4 ml-2">
+                <li class="nav-item my-2">
+                    <div class="d-flex">
+                        <button class="sidebar-button btn rounded-pill flex-grow-1">SIGN UP</button>
+                    </div>
+                </li>
+                <li class="nav-item d-flex my-2">
+                    <button class="sidebar-button btn rounded-pill flex-grow-1">LOGIN</button>
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                    <div>
+                        <span class="sidebar-footer-disclaimer">Cookie | Privacy | Policy</span>
+                    </div>
+                </li>
+            </ul> -->
+            <!-- End foot sidebar with buttons -->
+        </div>
+                  <!-- <div class="row"> -->
+                    <div class="col-xs-6 col-md-4">
+                     
+                     <img src="https://www.udiscovermusic.com/wp-content/uploads/2019/03/Queen-II-album-cover-820.jpg"> 
+                    <h1>Queen II (Deluxe Edition 2011 Remaster)</h1><br>
+                  
+                    <h6>Queen</h6><br>
+                    <button class="button artist-playButton btn rounded-pill mx-2 w-25">PLAY</button><br>
+                    
+                    <div class="Year">
+                    <p>1974 * 16 Song </p>
+                </div><br> 
+                    
+                    <div class="icon">
+                    
+                        <i class="fa fa-heart" id="heart"></i>
+                        <a href="#" class="dots">
+                            <div class="dot"></div>
+                          </a>
+                
+                    </div>
+                    </div>
+                    
+                <div class="col-xs-6 col-md-4">
+                   <ul>  
+                   <li><ion-icon class="note" name="musical-note-outline"></ion-icon>Procession - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">1:13</p><hr>
+                <li><ion-icon  class="note" name="musical-note-outline"></ion-icon>Father to Son - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">6:14</p><hr>
+                <li><ion-icon   class="note"name="musical-note-outline"></ion-icon>White Queen (As It Began) - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:36</p><hr>
+                <li><ion-icon   class="note" name="musical-note-outline"></ion-icon>Some Day One Day - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:22</p><hr>
+                <li><ion-icon  class="note" name="musical-note-outline"></ion-icon>The Loser in the End - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:04</p><hr>
+                <li><ion-icon  class="note" name="musical-note-outline"></ion-icon>Ogre Battle - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:08</p><hr>
+                <li><ion-icon  class="note" name="musical-note-outline"></ion-icon>The Fairy Feller’s Master-Stroke - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">2:41</p><hr>
+                <li><ion-icon  class="note" name="musical-note-outline"></ion-icon>Nevermore - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">1:19</p><hr>
+                <li><ion-icon  class="note" name="musical-note-outline"></ion-icon>March of the Black Queen - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">6:34</p><hr>
+                <li><ion-icon  class="note" name="musical-note-outline"></ion-icon>Funny How Love Is - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">2:50</p><hr>
+                
+                
+                    </ul>
+                </div>
+                    </div>
+                  </div>
+                
+                  
+            <!-- Start Artist page  -->
+            <!-- Start Artist page  -->
+        </div>
+        <footer class="player fixed-bottom">
+          <div class="row d-flex align-items-center mr-0">
+              <!--Start Preview -->
+              <div class="col d-flex flex-row align-items-center ml-3 flex-shrink-0">
+                  <img class="img-fluid" src="/assets/img/player-preview.jpg" alt="" style="max-width: 6vh">
+                  <div class="player-preview-text d-inline-block d-sm-flex flex-column mx-2">
+                      <span class="text-white">Song For My Father</span>
+                      <span class="text-muted">Horace Silverman</span>
+                  </div>
+                  <div class="ml-3">
+                      <ion-icon class="player-controls mx-1 d-none d-sm-none d-md-none d-lg-none d-lg-inline-block" name="heart-outline"></ion-icon>
+                      <ion-icon class="player-controls mx-1 d-none d-sm-none d-md-none d-lg-none d-lg-inline-block" name="laptop-outline"></ion-icon>
+                  </div>
+              </div>
+              <!-- End Preview  -->
+              <!-- Start Playercontrols -->
+              <div class="col d-flex flex-column align-items-center">
+                  <div class="row">
+                      <div class="player-controls d-flex col mt-2 align-items-center">
+                          <ion-icon class="mx-2" name="shuffle"></ion-icon>
+                          <ion-icon class="mx-2" name="play-skip-back"></ion-icon>
+                          <ion-icon class="mx-2" name="play-circle-outline"></ion-icon>
+                          <ion-icon class="mx-2" name="play-skip-back"></ion-icon>
+                          <ion-icon class="mx-2" name="repeat"></ion-icon>
+                      </div>
+                  </div>
+                  <div class="player-song-progress row">
+                      <div class="col d-flex align-items-center">
+                          <span class="mx-2">0:00</span>
+                          <hr class="player-progress-divider m-0" , size="3" , color=var(--sidebar-text-color)>
+                          <span class="mx-2">7:18</span>
+                      </div>
+                  </div>
+              </div>
+              <!-- End Playercontrols -->
+              <!-- Start Volume -->
+              <div class="col player-controls d-none d-sm-none d-md-none d-lg-none d-xl-flex justify-content-end align-items-center ">
+                  <ion-icon class="mx-2" name="reorder-four-outline"></ion-icon>
+                  <ion-icon class="mx-2" name="laptop-outline"></ion-icon>
+                  <ion-icon class="mx-2" name="volume-high-outline"></ion-icon>
+                  <hr class="player-volume-bar m-0 ml-2 mr-4" style="width:20%" , size="3" , color=var(--footer-player-text-color)>
+              </div>
+              <!-- End Volume -->
+          </div>
+      </footer>
+      <!-- End playerfooter -->
+  </div>
+
+    <script>(function() {
+        const heart = document.getElementById('heart');
+        heart.addEventListener('click', function() {
+          heart.classList.toggle('red');
+        });
+      })();</script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
+</html>
