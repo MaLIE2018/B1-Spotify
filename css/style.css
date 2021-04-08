@@ -103,6 +103,40 @@ h2 {
   height: 90vh;
 }
 
+.sidebar .navbar-nav .navbar-toggler ion-icon[name="menu-outline"] {
+    color: var(--login-bg-color);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.sidebar .sidebar-dropdown {
+    visibility: hidden;
+    background-color: var(--home-bg-color);
+    top: 9vh;
+    position: absolute;
+    /* transition: all 0.2s ease */
+}
+
+.sidebar .navbar-toggler {
+    transform: scale(1.5);
+}
+
+.sidebar .sidebar-dropdown-trigger:hover .sidebar-dropdown {
+    visibility: visible;
+    animation: slide-in-top 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(100)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
 .sidebar ul li span {
   color: var(--sidebar-text-color);
 }
@@ -194,6 +228,21 @@ h2 {
   background-color: var(--artist-section-bg-color);
 }
 
+
+.artist-header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-image: url("../assets/img/queens_concert.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
 /* Header */
 
 .artist-header {
@@ -204,15 +253,47 @@ h2 {
   font-size: 96px;
 }
 
+
+.artist-header h5 {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.artist-nav {
+    z-index: 5;
+}
+
+.artist-albums::before {
+    content: '';
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6026611328125) 0%, rgba(18, 18, 18, 0.9724090319721639) 80%);
+    filter: blur(10px);
+    position: absolute;
+    top: -60px;
+    left: 0;
+    z-index: 0;
+}
+
+
+
 /* En Header */
 
 /* Button Row */
 
 .artist-followButton {
+
   border: 2px solid var(--sidebar-text-color);
   color: var(--sidebar-text-color);
   font-weight: 700;
   transition: all 0.2s ease;
+
+    border: 2px solid var(--sidebar-text-color);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--sidebar-text-color);
+    font-weight: 700;
+    transition: all 0.2s ease
+
 }
 
 .artist-followButton:hover {
@@ -271,6 +352,7 @@ h2 {
 }
 
 .artist-album-card:hover .artist-album-card-button {
+
   visibility: visible;
   animation: slide-in 0.4s ease forwards;
 }
@@ -284,6 +366,21 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
+
+    visibility: visible;
+    animation: slide-in-bottom 0.4s ease forwards;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
 }
 
 .artist-album-card-albumTitle {
@@ -330,6 +427,7 @@ section.artist-albums h3 {
 }
 
 @media (max-width: 962px) {
+
   .sidebar .navbar-nav li span {
     font-size: 0.8rem;
   }
@@ -349,3 +447,30 @@ section.artist-albums h3 {
     width: 75vw;
   }
 }
+
+    .sidebar .navbar-nav li span {
+        font-size: 0.8rem;
+    }
+    .player-progress-divider {
+        width: 20vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        height: 9vh;
+    }
+    .player {
+        height: 15vh;
+    }
+    .player-progress-divider {
+        width: 75vw;
+    }
+    .artist-header h1 {
+        font-size: 36px;
+    }
+    .artist-header h5 {
+        font-size: 0.7rem;
+    }
+}
+

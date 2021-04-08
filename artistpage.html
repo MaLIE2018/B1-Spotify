@@ -22,25 +22,61 @@
         <!-- Start sidebar -->
         <div class="row">
             <!-- Start sidebar -->
-            <div class="sidebar bd-sidebar d-none col-12 col-sm-1 col-md-2 col-xl-3 d-flex flex-column sticky-top">
-                <ul class="navbar-nav text-light ml-2">
+            <div class="sidebar d-none col-12 col-sm-1 col-md-2 col-xl-3 d-flex flex-column sticky-top">
+                <ul class="sidebar-top-nav navbar-nav text-light ml-2">
                     <li class="nav-item mt-4">
-                        <img class="img-fluid d-sm-none d-md-block" src="./assets/img/spotify-1-logo-black-and-white.png" alt="" style="max-height:40px">
+                        <div class="d-flex flex-row align-items-center">
+                            <img class="img-fluid d-sm-none d-md-block" src="./assets/img/spotify-1-logo-black-and-white.png" alt="" style="max-height:40px">
+                            <div class="sidebar-dropdown-trigger ml-auto d-inline-block d-sm-none">
+                                <button class="navbar-toggler">
+                                    <ion-icon name="menu-outline"></ion-icon>
+                                </button>
+                                <div class="sidebar-dropdown fixed-top">
+                                    <div class="p-4">
+                                        <div class="mt-3">
+                                            <ion-icon name="home-outline"></ion-icon>
+                                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Home</span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Search</span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <ion-icon class="player-controls" name="library-outline"></ion-icon>
+                                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Your Libary</span>
+                                        </div>
+                                        <hr class="sidebar-devider" style="width:100%" , size="3" , color=var(--sidebar-text-color)>
+                                        <div class="mt-3">
+                                            <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Install App</span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <img class="rounded-circle" src="./assets/img/DSC09736cut.jpg" alt="" style="width:29px">
+                                            <span class="ml-lg-1 ml-1 text-white d-sm-none d-md-inline-block d-lg-inline-block">Maximilian Liebsch</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                         <img class="img-fluid d-none d-sm-block d-md-none " src="./assets/img/spotify_logo_whit_wt.png" alt="" style="max-height:40px">
+                        <!-- smartphone small screen collapse -->
+
+                        <!-- end smartphone small screen collapse -->
                     </li>
-                    <li class="nav-item mt-3">
+                    <li class="nav-item mt-3 d-none d-sm-inline">
                         <div>
                             <ion-icon name="home-outline"></ion-icon>
                             <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Home</span>
                         </div>
                     </li>
-                    <li class="nav-item mt-3">
+                    <li class="nav-item mt-3 d-none d-sm-inline">
                         <div>
                             <ion-icon name="search-outline"></ion-icon>
                             <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Search</span>
                         </div>
                     </li>
-                    <li class="nav-item mt-3">
+                    <li class="nav-item mt-3 d-none d-sm-inline">
                         <div>
                             <ion-icon class="player-controls" name="library-outline"></ion-icon>
                             <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Your Libary</span>
@@ -48,7 +84,7 @@
                     </li>
                 </ul>
                 <!-- foot sidebar -->
-                <ul class="navbar-nav mt-0 mt-sm-auto mb-4 ml-2">
+                <ul class="navbar-nav mt-0 mt-sm-auto mb-4 ml-2 d-none d-sm-inline">
                     <li class="nav-item mt-3">
                         <div>
                             <ion-icon name="arrow-down-circle-outline"></ion-icon>
@@ -86,11 +122,11 @@
             </div>
             <!-- End sidebar -->
             <!-- Start Artist page  -->
-            <div class="artist-section col-12 col-sm-11 col-md-10 col-xl-9">
+            <div class="artist-section p-0 col-12 col-sm-11 col-md-10 col-xl-9">
                 <!-- Header -->
-                <div class="artist-header d-flex justify-content-center mt-5">
-                    <div class="row d-flex flex-column align-items-center flex-grow-1">
-                        <div>33,000,575 MONTLY LISTENERS</div>
+                <div class="artist-header position-relative d-flex justify-content-center pt-3 pt-sm-5">
+                    <div class="row position-relative d-flex flex-column align-items-center flex-grow-1 m-0">
+                        <h5>33,000,575 MONTLY LISTENERS</h5>
                         <h1>Queen</h1>
                         <div class="col artist-header-button-row d-flex justify-content-center mt-3">
                             <button class="button artist-playButton btn rounded-pill mx-2 w-25">Play</button>
@@ -100,9 +136,9 @@
                             </button>
                         </div>
                         <!-- navbar -->
-                        <div class="col d-flex justify-content-md-center justify-content-sm-start">
-                            <nav class="artist-nav navbar navbar-expand-lg mt-5">
-                                <ul class="navbar-nav">
+                        <div class="col d-flex justify-content-center">
+                            <nav class="artist-nav navbar mt-5 mb-3">
+                                <ul class="navbar-nav d-flex flex-row">
                                     <li class="nav-item mx-3 my-1 my-sm-0">OVERVIEW</li>
                                     <li class="nav-item mx-3 my-1 my-sm-0">RELATED ARTISTS</li>
                                     <li class="nav-item mx-3 my-1 my-sm-0">ABOUT</li>
@@ -111,15 +147,16 @@
                         </div>
 
                         <!-- navbar end -->
-
                     </div>
+
                 </div>
                 <!-- End Header -->
                 <!-- Section Albums -->
-                <section class="artist-albums mt-5 mb-3">
+                <section class="artist-albums p-3 mt-3 mb-3 position-relative">
+                    <!-- <div class="pt-5 position-absolute bg-secondary w-100" style="top:20px;height:30px"></div> -->
                     <h3>Discography</h3>
                     <div class="row d-flex mt-4">
-                        <div class="col-12 col-sm-6 col-md-3 d-flex mt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
                             <div class="artist-album-card card align-self-stretch">
                                 <div class="artist-album-img-container">
                                     <img src="./assets/img/queen1.jpg" class="card-img-top p-3" alt="...">
@@ -133,7 +170,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-3 d-flex mt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
                             <div class="artist-album-card card align-self-stretch">
                                 <div class="artist-album-img-container"></div>
                                 <img src="./assets/img/queen2.jpg" class="card-img-top p-3" alt="...">
@@ -147,7 +184,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-3 d-flex mt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
                             <div class="artist-album-card card align-self-stretch">
                                 <div class="artist-album-img-container">
                                     <img src="./assets/img/queen3.jpg" class="card-img-top p-3" alt="...">
@@ -161,7 +198,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-3 d-flex mt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
                             <div class="artist-album-card card align-self-stretch">
                                 <div class="artist-album-img-container">
                                     <img src="./assets/img/queen4.jpg" class="card-img-top p-3" alt="...">
@@ -177,7 +214,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-3 d-flex mt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
                             <div class="artist-album-card card align-self-stretch">
                                 <div class="artist-album-img-container">
                                     <img src="./assets/img/queen5.jpg" class="card-img-top p-3" alt="...">
@@ -193,7 +230,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-3 d-flex mt-3">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
                             <div class="artist-album-card card align-self-stretch">
                                 <img src="./assets/img/queen6.jpg" class="card-img-top p-3" alt="...">
 
@@ -217,15 +254,15 @@
         <footer class="player fixed-bottom">
             <div class="row d-flex align-items-center mr-0">
                 <!--Start Preview -->
-                <div class="col d-flex flex-row align-items-center ml-3">
+                <div class="col d-flex flex-row align-items-center ml-3 flex-shrink-0">
                     <img class="img-fluid" src="/assets/img/player-preview.jpg" alt="" style="max-width: 6vh">
-                    <div class="player-preview-text d-flex flex-column mx-2">
+                    <div class="player-preview-text d-inline-block d-sm-flex flex-column mx-2">
                         <span class="text-white">Song For My Father</span>
                         <span class="text-muted">Horace Silverman</span>
                     </div>
                     <div class="ml-3">
-                        <ion-icon class="player-controls mx-1 d-lg-inline-block" name="heart-outline"></ion-icon>
-                        <ion-icon class="player-controls mx-1 d-lg-inline-block" name="laptop-outline"></ion-icon>
+                        <ion-icon class="player-controls mx-1 d-none d-sm-none d-md-none d-lg-none d-lg-inline-block" name="heart-outline"></ion-icon>
+                        <ion-icon class="player-controls mx-1 d-none d-sm-none d-md-none d-lg-none d-lg-inline-block" name="laptop-outline"></ion-icon>
                     </div>
                 </div>
                 <!-- End Preview  -->
@@ -250,7 +287,7 @@
                 </div>
                 <!-- End Playercontrols -->
                 <!-- Start Volume -->
-                <div class="col player-controls d-flex justify-content-end align-items-center">
+                <div class="col player-controls d-none d-sm-none d-md-none d-lg-none d-xl-flex justify-content-end align-items-center ">
                     <ion-icon class="mx-2" name="reorder-four-outline"></ion-icon>
                     <ion-icon class="mx-2" name="laptop-outline"></ion-icon>
                     <ion-icon class="mx-2" name="volume-high-outline"></ion-icon>
