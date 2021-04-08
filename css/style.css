@@ -1,10 +1,13 @@
 /* Example */
 
+
 /*------------------------------------*\
                 #sidebar
 \*------------------------------------*/
 
+
 /* classnames .class example of a modul */
+
 
 /* .sidebar {} 
 .sidebar-title {}
@@ -12,13 +15,17 @@
 .sidebar-productTitle {}
 .sidebar-removeButton {} */
 
+
 /*------------------------------------*\
                 #footer
 \*------------------------------------*/
 
+
 /* .footer-playButton{} */
 
+
 /* Example */
+
 
 /*------------------------------------*\
 
@@ -26,100 +33,102 @@
 \*------------------------------------*/
 
 :root {
-  --home-bg-color: black;
-  --login-bg-color: #ffffff;
-  --sidebar-text-color: #a6a6a6;
-  --footer-bg-color: #282828;
-  --footer-player-text-color: #b3b3b3;
-  --artist-section-bg-color: #121212;
-  --artist-album-card-bg-color: #262626;
-  --spotify-color: #1db954;
+    --home-bg-color: black;
+    --login-bg-color: #ffffff;
+    --sidebar-text-color: #a6a6a6;
+    --footer-bg-color: #282828;
+    --footer-player-text-color: #b3b3b3;
+    --artist-section-bg-color: #121212;
+    --artist-album-card-bg-color: #262626;
+    --spotify-color: #1db954;
 }
+
 
 /*------------------------------------*\
                 #homepage
 \*------------------------------------*/
 
 #body {
-  font-family: 'Montserrat', sans-serif;
-  background: rgb(10, 16, 23);
-  background: radial-gradient(
-    circle,
-    rgba(10, 16, 23, 1) 0%,
-    rgba(25, 50, 77, 1) 91%
-  );
-  font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(10, 16, 23);
+    background: radial-gradient( circle, rgba(10, 16, 23, 1) 0%, rgba(25, 50, 77, 1) 91%);
+    font-size: 100%;
 }
+
 .cardHoover:hover {
-  transform: scale(1.02);
-  box-shadow: 5px 6px 14px -2px rgba(33, 145, 99, 0.5);
+    transform: scale(1.02);
+    box-shadow: 5px 6px 14px -2px rgba(33, 145, 99, 0.5);
 }
 
 nav {
-  letter-spacing: 0.15em;
-  font-size: 9px;
+    letter-spacing: 0.15em;
+    font-size: 9px;
 }
 
 #h1 {
-  color: white;
+    color: white;
 }
 
 @media only screen and (max-width: 768px) {
-  #h1 {
-    font-size: 20px;
-  }
-  #h2 {
-    font-size: 20px;
-  }
+    #h1 {
+        font-size: 20px;
+    }
+    #h2 {
+        font-size: 20px;
+    }
 }
+
 @media only screen and (min-width: 992px) {
-  #h1 {
-    font-size: 40px;
-  }
+    #h1 {
+        font-size: 40px;
+    }
 }
+
 @media only screen and (min-width: 1200px) {
-  #h1 {
-    font-size: 45px;
-  }
+    #h1 {
+        font-size: 45px;
+    }
 }
 
 #img-card {
-  padding-left: 7px;
-  padding-right: 7px;
-  background-color: transparent;
-  border: none;
+    padding-left: 7px;
+    padding-right: 7px;
+    background-color: transparent;
+    border: none;
 }
 
 #card-text {
-  color: white;
-  font-size: 12px;
+    color: white;
+    font-size: 12px;
 }
 
 #h2 {
-  color: white;
+    color: white;
 }
 
 #underline {
-  /* text-decoration: underline;
+    /* text-decoration: underline;
   text-underline-position: under;
 
   text-decoration-color: #219163; */
-  border-bottom: 2px solid #219163;
-  padding-bottom: 3px;
+    border-bottom: 2px solid #219163;
+    padding-bottom: 3px;
 }
+
 #homeButton {
-  border-left: 2px solid #219163;
+    border-left: 2px solid #219163;
 }
+
 
 /*------------------------------------*\
                 #sidebar
 \*------------------------------------*/
 
 .sidebar {
-  background-color: var(--home-bg-color);
-  color: var(--sidebar-text-color);
-  font-weight: 700;
-  height: 90vh;
+    background-color: var(--home-bg-color);
+    color: var(--sidebar-text-color);
+    font-weight: 700;
+    height: 90vh;
 }
 
 .sidebar .navbar-nav .navbar-toggler ion-icon[name="menu-outline"] {
@@ -157,96 +166,96 @@ nav {
 }
 
 .sidebar ul li span {
-  color: var(--sidebar-text-color);
+    color: var(--sidebar-text-color);
 }
 
 .sidebar ul li span:hover {
-  cursor: pointer;
-  color: var(--login-bg-color);
+    cursor: pointer;
+    color: var(--login-bg-color);
 }
 
 .sidebar-devider {
-  color: var(--sidebar-text-color);
-  width: 100%;
-  size: 3;
+    color: var(--sidebar-text-color);
+    width: 100%;
+    size: 3;
 }
 
 .sidebar .sidebar-button {
-  border-radius: 10px;
-  border: 3px solid var(--login-bg-color);
-  color: var(--login-bg-color);
-  font-weight: 700;
-  transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    border: 3px solid var(--login-bg-color);
+    color: var(--login-bg-color);
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
 }
 
 .sidebar .sidebar-button:hover {
-  background-color: var(--login-bg-color);
-  transform: scale(1.05);
-  color: var(--home-bg-color);
+    background-color: var(--login-bg-color);
+    transform: scale(1.05);
+    color: var(--home-bg-color);
 }
 
 .sidebar-footer-disclaimer {
-  font-size: 0.8rem;
-  font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
+
 
 /*------------------------------------*\
                 #player
 \*------------------------------------*/
 
 .player {
-  margin-left: -15px;
-  margin-right: -15px;
-  height: 10vh;
-  position: sticky;
-
-  bottom: 0;
-  background-color: var(--footer-bg-color);
+    margin-left: -15px;
+    margin-right: -15px;
+    height: 10vh;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--footer-bg-color);
 }
 
 .player-controls {
-  color: var(--sidebar-text-color);
+    color: var(--sidebar-text-color);
 }
 
 .player-controls ion-icon[name='play-circle-outline'] {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 .player-preview-text {
-  line-height: 1.2em;
-  text-overflow: ellipsis;
-  /*truncates the text over 80px overflow with three ...*/
-  white-space: nowrap;
-  overflow: hidden;
+    line-height: 1.2em;
+    text-overflow: ellipsis;
+    /*truncates the text over 80px overflow with three ...*/
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .player .player-progress-divider {
-  height: 2px;
-  background-color: #404040;
+    height: 2px;
+    background-color: #404040;
 }
 
 .player .player-song-progress span {
-  font-size: 0.7rem;
-  color: var(--footer-player-text-color);
+    font-size: 0.7rem;
+    color: var(--footer-player-text-color);
 }
 
 .player .player-volume-bar {
-  height: 2px;
-  background-color: var(--footer-player-text-color);
+    height: 2px;
+    background-color: var(--footer-player-text-color);
 }
 
 .player-progress-divider {
-  width: 400px;
+    width: 400px;
 }
+
 
 /*------------------------------------*\
                 #Artist page
 \*------------------------------------*/
 
 .artist-section {
-  background-color: var(--artist-section-bg-color);
+    background-color: var(--artist-section-bg-color);
 }
-
 
 .artist-header:before {
     content: '';
@@ -262,16 +271,16 @@ nav {
     background-size: auto;
 }
 
+
 /* Header */
 
 .artist-header {
-  color: var(--sidebar-text-color);
+    color: var(--sidebar-text-color);
 }
 
 .artist-header h1 {
-  font-size: 96px;
+    font-size: 96px;
 }
-
 
 .artist-header h5 {
     font-size: 0.9rem;
@@ -295,97 +304,96 @@ nav {
 }
 
 
-
 /* En Header */
+
 
 /* Button Row */
 
 .artist-followButton {
-
-  border: 2px solid var(--sidebar-text-color);
-  color: var(--sidebar-text-color);
-  font-weight: 700;
-  transition: all 0.2s ease;
-
+    border: 2px solid var(--sidebar-text-color);
+    color: var(--sidebar-text-color);
+    font-weight: 700;
+    transition: all 0.2s ease;
     border: 2px solid var(--sidebar-text-color);
     background-color: rgba(0, 0, 0, 0.6);
     color: var(--sidebar-text-color);
     font-weight: 700;
     transition: all 0.2s ease
-
 }
 
 .artist-followButton:hover {
-  background-color: var(--sidebar-text-color);
-  transform: scale(1.05);
+    background-color: var(--sidebar-text-color);
+    transform: scale(1.05);
 }
 
 .artist-playButton {
-  color: var(--login-bg-color);
-  font-weight: 700;
-  background-color: var(--spotify-color);
-  transition: all 0.2s ease;
+    color: var(--login-bg-color);
+    font-weight: 700;
+    background-color: var(--spotify-color);
+    transition: all 0.2s ease;
 }
 
 .artist-playButton:hover {
-  transform: scale(1.05);
-  color: white;
+    transform: scale(1.05);
+    color: white;
 }
 
 .artist-menuButton:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .artist-header-button-row {
-  color: var(--sidebar-text-color);
+    color: var(--sidebar-text-color);
 }
 
+
 /* End Button Row */
+
 
 /* Menubar */
 
 .artist-header ul li {
-  cursor: pointer;
-  padding-bottom: 4px;
-  font-weight: 700;
+    cursor: pointer;
+    padding-bottom: 4px;
+    font-weight: 700;
 }
 
 .artist-header ul li:hover {
-  border-bottom: 1px solid var(--spotify-color);
-  color: var(--login-bg-color);
+    border-bottom: 1px solid var(--spotify-color);
+    color: var(--login-bg-color);
 }
 
+
 /* End Menubar */
+
 
 /* Album */
 
 .artist-album-card {
-  background-color: var(--artist-album-card-bg-color);
-  border-radius: 2px;
-  transition: all 0.2s ease;
-  cursor: pointer;
+    background-color: var(--artist-album-card-bg-color);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .artist-album-card:hover {
-  background-color: rgb(92 91 91);
+    background-color: rgb(92 91 91);
 }
 
 .artist-album-card:hover .artist-album-card-button {
-
-  visibility: visible;
-  animation: slide-in 0.4s ease forwards;
+    visibility: visible;
+    animation: slide-in 0.4s ease forwards;
 }
 
 @keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
     visibility: visible;
     animation: slide-in-bottom 0.4s ease forwards;
 }
@@ -399,79 +407,71 @@ nav {
         opacity: 1;
         transform: translateY(0)
     }
-
 }
 
 .artist-album-card-albumTitle {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--login-bg-color);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--login-bg-color);
 }
 
 .artist-album-card-subTitle {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--footer-player-text-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--footer-player-text-color);
 }
 
 .artist-album-card-button {
-  visibility: hidden;
-  background-color: var(--spotify-color);
-  bottom: 27%;
-  right: 8%;
-  position: absolute;
+    visibility: hidden;
+    background-color: var(--spotify-color);
+    bottom: 27%;
+    right: 8%;
+    position: absolute;
 }
 
 section.artist-albums h3 {
-  color: var(--login-bg-color);
-  font-weight: 700;
+    color: var(--login-bg-color);
+    font-weight: 700;
 }
 
+
 /* End Album */
+
 
 /*------------------------------------*\
                 #media queries
 \*------------------------------------*/
 
 @media screen and (max-height: 900px) {
-  .player {
-    padding-top: 1vh;
-  }
+    .player {
+        padding-top: 1vh;
+    }
 }
 
 @media screen and (min-height: 901px) {
-  .player {
-    padding-top: 1vh;
-  }
+    .player {
+        padding-top: 1vh;
+    }
 }
 
 @media (max-width: 962px) {
-
-  .sidebar .navbar-nav li span {
-    font-size: 0.8rem;
-  }
-  .player-progress-divider {
-    width: 300px;
-  }
-}
-
-@media (max-width: 576px) {
-  .sidebar {
-    height: 30vh;
-  }
-  .player {
-    height: 15vh;
-  }
-  .player-progress-divider {
-    width: 75vw;
-  }
-}
-
     .sidebar .navbar-nav li span {
         font-size: 0.8rem;
     }
     .player-progress-divider {
-        width: 20vh;
+        width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        height: 10vh;
+    }
+    .player {
+        height: 15vh;
+    }
+    .player-progress-divider {
+        width: 75vw;
     }
 }
 
@@ -492,4 +492,3 @@ section.artist-albums h3 {
         font-size: 0.7rem;
     }
 }
-
