@@ -2,6 +2,7 @@ const showHomepage = () => {
     document.querySelector('.home-section').classList.remove('d-none')
     document.querySelector('.artist-section').classList.add('d-none')
     document.querySelector('.sidebar-footer-with-buttons').classList.remove('d-none')
+    document.querySelector('.album-section').classList.add('d-none')
 }
 
 const showFavoritArtistpage = (event) => {
@@ -15,6 +16,14 @@ const showFavoritArtistpage = (event) => {
 
 }
 
+const login = () => {
+    localStorage.setItem("LOGGED", "aosdifuaosdifuasodfi")
+}
+
+window.onload = function() {
+    const isLogged = Boolean(localStorage.getItem("LOGGED"));
+    console.log(isLogged)
+}
 
 const showAlbumpage = () => {
     document.querySelector('.artist-section').classList.add('d-none')
