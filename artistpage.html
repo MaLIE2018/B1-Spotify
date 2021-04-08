@@ -9,11 +9,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="./assets/img/spotify_logo_without_text.png" type="image/x-icon">
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
-
-    <title>Hello, world</title>
+    <title>Spotify</title>
 </head>
 
 <body>
@@ -22,83 +22,262 @@
         <!-- Start sidebar -->
         <div class="row">
             <!-- Start sidebar -->
-            <div class="sidebar bd-sidebar col-md-2 col-xl-3 d-flex flex-column">
-                <ul class="navbar-nav text-light ml-2">
+            <div class="sidebar d-none col-12 col-sm-1 col-md-2 col-xl-3 d-flex flex-column sticky-top">
+                <ul class="sidebar-top-nav navbar-nav text-light ml-2">
+                    <!-- smartphone small screen collapse -->
                     <li class="nav-item mt-4">
-                        <div><img class="img-fluid" src="./assets/img/spotify-1-logo-black-and-white.png" alt="" style="max-height:40px"></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <img class="img-fluid d-sm-none d-md-block" src="./assets/img/spotify-1-logo-black-and-white.png" alt="" style="max-height:40px">
+                            <div class="sidebar-dropdown-trigger ml-auto d-inline-block d-sm-none">
+                                <button class="navbar-toggler">
+                                    <ion-icon name="menu-outline"></ion-icon>
+                                </button>
+                                <div class="sidebar-dropdown fixed-top">
+                                    <div class="p-4">
+                                        <div class="mt-3" onclick="showHomepage()">
+                                            <ion-icon name="home-outline"></ion-icon><span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Home</span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <ion-icon name="search-outline"></ion-icon>
+                                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Search</span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <ion-icon class="player-controls" name="library-outline"></ion-icon>
+                                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Your Libary</span>
+                                        </div>
+                                        <hr class="sidebar-devider" style="width:100%" , size="3" , color=var(--sidebar-text-color)>
+                                        <div class="mt-3">
+                                            <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Install App</span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <img class="rounded-circle" src="./assets/img/DSC09736cut.jpg" alt="" style="width:29px">
+                                            <span class="ml-lg-1 ml-1 text-white d-sm-none d-md-inline-block d-lg-inline-block">Maximilian Liebsch</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <img class="img-fluid d-none d-sm-block d-md-none " src="./assets/img/spotify_logo_whit_wt.png" alt="" style="max-height:40px">
                     </li>
-                    <li class="nav-item mt-3">
-                        <div>
-                            <ion-icon name="home-outline"></ion-icon><span class="ml-3">Home</span>
+                    <!-- end smartphone small screen collapse -->
+                    <!-- standard sidebar items -->
+                    <li class="nav-item mt-3 d-none d-sm-inline active">
+                        <div onclick="showHomepage()">
+                            <ion-icon name="home-outline"></ion-icon><span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Home</span>
                         </div>
                     </li>
-                    <li class="nav-item mt-3">
+                    <li class="nav-item mt-3 d-none d-sm-inline">
                         <div>
-                            <ion-icon name="search-outline"></ion-icon><span class="ml-3">Search</span>
+                            <ion-icon name="search-outline"></ion-icon>
+                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Search</span>
                         </div>
                     </li>
-                    <li class="nav-item mt-3">
+                    <li class="nav-item mt-3 d-none d-sm-inline">
                         <div>
                             <ion-icon class="player-controls" name="library-outline"></ion-icon>
-                            <span class="ml-3">Your Libary</span>
+                            <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Your Libary</span>
                         </div>
                     </li>
+                    <!-- end standard sidebar items -->
                 </ul>
-                <!-- foot sidebar -->
-                <!-- <ul class="navbar-nav mt-auto mb-4 ml-2">
-                    <li class="nav-item">
-                        <div>
-                            <ion-icon name="arrow-down-circle-outline"></ion-icon><span class="ml-3">Install App</span>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <hr class="sidebar-devider" style="width:100%" , size="3" , color=var(--sidebar-text-color)>
-                    </li>
-                    <li class="nav-item">
-                        <div>
-                            <img class="rounded-circle" src="./assets/img/DSC09736cut.jpg" alt="" style="width:29px">
-                            <span class="text-white">Maximilian Liebsch</span>
-                        </div>
-                    </li>
-                </ul> -->
-                <!-- foot sidebar -->
-                <!-- Start foot sidebar with buttons -->
-                <ul class="navbar-nav mt-auto mb-4 ml-2">
-                    <li class="nav-item my-2">
-                        <div class="d-flex">
-                            <button class="sidebar-button btn rounded-pill flex-grow-1">SIGN UP</button>
-                        </div>
-                    </li>
-                    <li class="nav-item d-flex my-2">
-                        <button class="sidebar-button btn rounded-pill flex-grow-1">LOGIN</button>
-                    </li>
-                    <li class="nav-item d-flex justify-content-center">
-                        <div>
-                            <span class="sidebar-footer-disclaimer">Cookie | Privacy | Policy</span>
-                        </div>
-                    </li>
-                </ul>
-                <!-- End foot sidebar with buttons -->
+                <!--start sidebar footer account -->
+                <div class="sidebar-footer mt-sm-auto mb-4 ml-2 d-none">
+                    <ul class="navbar-nav mt-0 mt-sm-auto mb-4 ml-2 d-none d-sm-inline">
+                        <li class="nav-item mt-3">
+                            <div>
+                                <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                                <span class="ml-lg-3 ml-1 d-sm-none d-md-inline-block d-lg-inline-block">Install App</span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <hr class="sidebar-devider" style="width:100%" , size="3" , color=var(--sidebar-text-color)>
+                        </li>
+                        <li class="nav-item">
+                            <div>
+                                <img class="rounded-circle" src="./assets/img/DSC09736cut.jpg" alt="" style="width:29px">
+                                <span class="ml-lg-1 ml-1 text-white d-sm-none d-md-inline-block d-lg-inline-block">Maximilian Liebsch</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- end sidebar footer account  -->
+                <!-- Start foot sidebar with button -->
+                <div class="sidebar-footer-with-buttons mt-sm-auto mb-4 ml-2 d-none">
+                    <ul class="navbar-nav mt-sm-auto mb-4 ml-2 d-none d-sm-inline">
+                        <li class="nav-item my-2">
+                            <div class="d-flex">
+                                <button class="sidebar-button btn rounded-pill flex-grow-1">SIGN UP</button>
+                            </div>
+                        </li>
+                        <li class="nav-item d-flex my-2">
+                            <a class="sidebar-button btn rounded-pill flex-grow-1" href="login.html">LOGIN</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-center">
+                            <div>
+                                <span class="sidebar-footer-disclaimer">Cookie | Privacy | Policy</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End foot sidebar with button -->
             </div>
             <!-- End sidebar -->
             <!-- Start Artist page  -->
+            <div class="artist-section p-0 col-12 col-sm-11 col-md-10 col-xl-9">
+                <!-- Header -->
+                <div class="artist-header position-relative d-flex justify-content-center pt-3 pt-sm-5">
+                    <div class="row position-relative d-flex flex-column align-items-center flex-grow-1 m-0">
+                        <h5>33,000,575 MONTLY LISTENERS</h5>
+                        <h1>Queen</h1>
+                        <div class="col artist-header-button-row d-flex justify-content-center mt-3">
+                            <button class="button artist-playButton btn rounded-pill mx-2 w-25">Play</button>
+                            <button class="btn button artist-followButton rounded-pill mx-2 w-25">Follow</button>
+                            <button class="btn artist-menuButton" style="color:var(--sidebar-bg-text-color)">
+                                <ion-icon class="mx-2" name="ellipsis-horizontal-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <!-- navbar -->
+                        <div class="col d-flex justify-content-center">
+                            <nav class="artist-nav navbar mt-5 mb-3">
+                                <ul class="navbar-nav d-flex flex-row">
+                                    <li class="nav-item mx-3 my-1 my-sm-0">OVERVIEW</li>
+                                    <li class="nav-item mx-3 my-1 my-sm-0">RELATED ARTISTS</li>
+                                    <li class="nav-item mx-3 my-1 my-sm-0">ABOUT</li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- navbar end -->
+                    </div>
+
+                </div>
+                <!-- End Header -->
+                <!-- Section Albums -->
+                <section class="artist-albums p-3 mt-3 mb-3 position-relative">
+                    <!-- <div class="pt-5 position-absolute bg-secondary w-100" style="top:20px;height:30px"></div> -->
+                    <h3>Discography</h3>
+                    <div class="row d-flex mt-4">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
+                            <div class="artist-album-card card align-self-stretch">
+                                <div class="artist-album-img-container">
+                                    <img src="./assets/img/queen1.jpg" class="card-img-top p-3" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-center justify-self-end">
+                                    <button class="artist-album-card-button btn rounded-circle"><ion-icon class="text-white"name="play"></ion-icon></button>
+                                    <p class="card-text d-flex flex-column">
+                                        <span class="artist-album-card-albumTitle text-center">Bohemian Rhapsody</span>
+                                        <span class="artist-album-card-subTitle text-center">2018 • Album</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
+                            <div class="artist-album-card card align-self-stretch">
+                                <div class="artist-album-img-container"></div>
+                                <img src="./assets/img/queen2.jpg" class="card-img-top p-3" alt="...">
+
+                                <div class="card-body d-flex justify-content-center justify-self-end">
+                                    <button class="artist-album-card-button btn rounded-circle"><ion-icon class="text-white"name="play"></ion-icon></button>
+                                    <p class="card-text d-flex flex-column justify-content-center">
+                                        <span class="artist-album-card-albumTitle text-center">On Air</span>
+                                        <span class="artist-album-card-subTitle text-center">2018 • Album</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
+                            <div class="artist-album-card card align-self-stretch">
+                                <div class="artist-album-img-container">
+                                    <img src="./assets/img/queen3.jpg" class="card-img-top p-3" alt="...">
+                                </div>
+                                <div class="card-body d-flex justify-content-center justify-self-end">
+                                    <button class="artist-album-card-button btn rounded-circle"><ion-icon class="text-white"name="play"></ion-icon></button>
+                                    <p class="card-text d-flex flex-column justify-content-center">
+                                        <span class="artist-album-card-albumTitle text-center">Queen II</span>
+                                        <span class="artist-album-card-subTitle text-center">1978 • Album</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
+                            <div class="artist-album-card card align-self-stretch">
+                                <div class="artist-album-img-container">
+                                    <img src="./assets/img/queen4.jpg" class="card-img-top p-3" alt="...">
+                                </div>
+
+
+                                <div class="card-body d-flex justify-content-center justify-self-end">
+                                    <button class="artist-album-card-button btn rounded-circle"><ion-icon class="text-white"name="play"></ion-icon></button>
+                                    <p class="card-text d-flex flex-column justify-content-center">
+                                        <span class="artist-album-card-albumTitle text-center">A Night At The Odeon</span>
+                                        <span class="artist-album-card-subTitle text-center">2018 • Album</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
+                            <div class="artist-album-card card align-self-stretch">
+                                <div class="artist-album-img-container">
+                                    <img src="./assets/img/queen5.jpg" class="card-img-top p-3" alt="...">
+                                </div>
+
+
+                                <div class="card-body d-flex justify-content-center justify-self-end">
+                                    <button class="artist-album-card-button btn rounded-circle"><ion-icon class="text-white"name="play"></ion-icon></button>
+                                    <p class="card-text d-flex flex-column">
+                                        <span class="artist-album-card-albumTitle text-center">Live At The Rainbow</span>
+                                        <span class="artist-album-card-subTitle text-center">1974 • Album</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
+                            <div class="artist-album-card card align-self-stretch">
+                                <img src="./assets/img/queen6.jpg" class="card-img-top p-3" alt="...">
+
+                                <div class="card-body d-flex justify-content-center justify-self-end">
+                                    <button class="artist-album-card-button btn rounded-circle"><ion-icon class="text-white"name="play"></ion-icon></button>
+                                    <p class="card-text d-flex flex-column">
+                                        <span class="artist-album-card-albumTitle text-center">Hungarian Rhapsody</span>
+                                        <span class="artist-album-card-subTitle text-center">1986 • Album</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Section Albums -->
+
+            </div>
             <!-- Start Artist page  -->
+            <!-- Start Homepage -->
+            <div class="home-section p-0 col-12 col-sm-11 col-md-10 col-xl-9 d-none">
+                <iframe src="homepage.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+            <!-- End Homepage -->
+            <!-- Start Albumpage -->
+            <div class="album-section p-0 col-12 col-sm-11 col-md-10 col-xl-9 d-none">
+                <iframe src="albumpage.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+            <!-- End Albumpage -->
+
         </div>
-
-
         <!-- Start playerfooter -->
-        <footer class="player">
+        <footer class="player fixed-bottom">
             <div class="row d-flex align-items-center mr-0">
                 <!--Start Preview -->
-                <div class="col d-flex flex-row align-items-center ml-3">
+                <div class="col d-flex flex-row align-items-center ml-3 flex-shrink-0">
                     <img class="img-fluid" src="/assets/img/player-preview.jpg" alt="" style="max-width: 6vh">
-                    <div class="player-preview-text d-flex flex-column mx-2">
+                    <div class="player-preview-text d-inline-block d-sm-flex flex-column mx-2">
                         <span class="text-white">Song For My Father</span>
                         <span class="text-muted">Horace Silverman</span>
                     </div>
                     <div class="ml-3">
-                        <ion-icon class="player-controls mx-1 " name="heart-outline"></ion-icon>
-                        <ion-icon class="player-controls mx-1" name="laptop-outline"></ion-icon>
+                        <ion-icon class="player-controls mx-1 d-none d-sm-none d-md-none d-lg-none d-lg-inline-block" name="heart-outline"></ion-icon>
+                        <ion-icon class="player-controls mx-1 d-none d-sm-none d-md-none d-lg-none d-lg-inline-block" name="laptop-outline"></ion-icon>
                     </div>
                 </div>
                 <!-- End Preview  -->
@@ -116,14 +295,14 @@
                     <div class="player-song-progress row">
                         <div class="col d-flex align-items-center">
                             <span class="mx-2">0:00</span>
-                            <hr class="player-progress-divider m-0" style="width:400px" , size="3" , color=var(--sidebar-text-color)>
+                            <hr class="player-progress-divider m-0" , size="3" , color=var(--sidebar-text-color)>
                             <span class="mx-2">7:18</span>
                         </div>
                     </div>
                 </div>
                 <!-- End Playercontrols -->
                 <!-- Start Volume -->
-                <div class="col player-controls d-flex justify-content-end align-items-center">
+                <div class="col player-controls d-none d-sm-none d-md-none d-lg-none d-xl-flex justify-content-end align-items-center ">
                     <ion-icon class="mx-2" name="reorder-four-outline"></ion-icon>
                     <ion-icon class="mx-2" name="laptop-outline"></ion-icon>
                     <ion-icon class="mx-2" name="volume-high-outline"></ion-icon>
@@ -134,7 +313,7 @@
         </footer>
         <!-- End playerfooter -->
     </div>
-
+    <script src="./assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
