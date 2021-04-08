@@ -224,7 +224,15 @@ h2 {
     background-color: var(--artist-section-bg-color)
 }
 
-.artist-header {
+.artist-header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
     background-image: url("../assets/img/queens_concert.jpg");
     background-repeat: no-repeat;
     background-size: auto;
@@ -243,17 +251,23 @@ h2 {
 
 .artist-header h5 {
     font-size: 0.9rem;
-    font-weight: 300;
+    font-weight: 400;
+}
+
+.artist-nav {
+    z-index: 5;
 }
 
 .artist-albums::before {
     content: '';
-    height: 9%;
+    height: 70px;
     width: 100%;
-    background-color: black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6026611328125) 0%, rgba(18, 18, 18, 0.9724090319721639) 80%);
+    filter: blur(10px);
     position: absolute;
-    top: -48px;
+    top: -60px;
     left: 0;
+    z-index: 0;
 }
 
 
