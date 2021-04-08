@@ -48,6 +48,7 @@
     rgba(10, 16, 23, 1) 0%,
     rgba(25, 50, 77, 1) 91%
   );
+  font-size: 100%;
 }
 .cardHoover:hover {
   transform: scale(1.02);
@@ -100,9 +101,6 @@ h2 {
   color: var(--sidebar-text-color);
   font-weight: 700;
   height: 90vh;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 .sidebar ul li span {
