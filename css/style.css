@@ -69,27 +69,6 @@ nav {
     color: white;
 }
 
-@media only screen and (max-width: 768px) {
-    #h1 {
-        font-size: 20px;
-    }
-    #h2 {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    #h1 {
-        font-size: 40px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    #h1 {
-        font-size: 45px;
-    }
-}
-
 #img-card {
     padding-left: 7px;
     padding-right: 7px;
@@ -314,11 +293,6 @@ nav {
     color: var(--sidebar-text-color);
     font-weight: 700;
     transition: all 0.2s ease;
-    border: 2px solid var(--sidebar-text-color);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: var(--sidebar-text-color);
-    font-weight: 700;
-    transition: all 0.2s ease
 }
 
 .artist-followButton:hover {
@@ -394,8 +368,6 @@ nav {
         opacity: 1;
         transform: translateY(0);
     }
-    visibility: visible;
-    animation: slide-in-bottom 0.4s ease forwards;
 }
 
 @keyframes slide-in-bottom {
@@ -490,5 +462,26 @@ section.artist-albums h3 {
     }
     .artist-header h5 {
         font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #h1 {
+        font-size: 20px;
+    }
+    #h2 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #h1 {
+        font-size: 45px;
     }
 }
