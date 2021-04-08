@@ -118,6 +118,160 @@ nav {
 
 
 /*------------------------------------*\
+                #Album page
+\*------------------------------------*/
+
+.albumsongs-section {
+    background: linear-gradient(150deg, rgba(29, 29, 29, 1) 5%, rgba(0, 0, 0, 1) 75%);
+}
+
+.albumsongs-section h1 {
+    color: var(--login-bg-color);
+    font-size: 1.5rem;
+}
+
+.albumsongs-section h6 {
+    color: var(--sidebar-text-color);
+}
+
+.albumsongs-section li:hover {
+    background-color: rgb(94, 100, 95);
+}
+
+.nameOfBand {
+    color: gray;
+    float: left;
+    padding-left: 35px;
+}
+
+.albumsongs-section ul {
+    list-style-type: none;
+}
+
+.albumsongs-section li {
+    list-style-image: url('note.svg');
+    padding: 10px;
+    color: rgb(236, 221, 221);
+}
+
+.album-img {
+    width: 90%;
+}
+
+.album-icons ion-icon {
+    color: var(--sidebar-text-color);
+}
+
+.dot,
+.dot:before,
+.dot:after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #34495e;
+}
+
+.dot {
+    top: 50%;
+    left: 70%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.dot:before,
+.dot:after {
+    content: "";
+}
+
+.dot:before {
+    right: 25px;
+    transition: right .3s ease-out;
+}
+
+.dot:after {
+    left: 25px;
+    transition: left .3s ease-out;
+}
+
+.dots:hover .dot:before {
+    right: -25px;
+}
+
+.dots:hover .dot:after {
+    left: -25px;
+}
+
+.timeOfSong {
+    color: gray;
+    float: right;
+}
+
+h4 {
+    text-align: center;
+}
+
+.icon {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: -10%;
+}
+
+#heart {
+    color: grey;
+    font-size: 30px;
+}
+
+#heart.red {
+    color: red;
+}
+
+.PlayButtonGreen {
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #1DB954;
+    color: var(--sidebar-text-color);
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Year {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--sidebar-text-color);
+}
+
+.heart {
+    padding: 10px;
+}
+
+.three-dots {
+    padding: 10px;
+}
+
+.album-songname {
+    color: var(--login-bg-color);
+    font-weight: 600;
+}
+
+.album-artist,
+.album-note {
+    color: var(--sidebar-text-color);
+}
+
+.album-note {
+    font-weight: bold
+}
+
+
+/*------------------------------------*\
                 #sidebar
 \*------------------------------------*/
 

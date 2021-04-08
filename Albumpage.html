@@ -1,125 +1,311 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-    body {
-            background-color: #3a3b3c;
-            color: white;
-        }
-        
-        .nameOfBand {
-            color: gray;
-            float: left;
-        }
-        
-        li {
-            color: white;
-        }
-        
-        ul {
-            list-style-type: none;
-        }
-        
-        img {
-            display: block;
-            margin-top: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        
-        .icon {
-            text-align: center;
-            margin: 10px 50px 50px 10px;
-        }
-    }
-    .timeOfSong {
-        color: gray;
-        float: right;
-    }
-    h1 {
-        text-align: center;
-    }
-    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7294573315.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <link rel="shortcut icon" href="./assets/img/spotify_logo_without_text.png" type="image/x-icon">
+    <title>Spotify</title>
+
 </head>
 
 <body>
+    <div class="albumsongs-section row pb-3">
+        <div class="col-12 col-sm-4 d-flex flex-column align-items-center mt-3">
 
+            <img class="album-img" src="./assets/img/queen3.jpg">
+            <h1 class="text-center">Queen II (Deluxe Edition 2011 Remaster)</h1>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
+            <h6>Queen</h6>
+            <button class="button artist-playButton btn rounded-pill my-3 mt-3 w-50">PLAY</button>
 
-                <img src="https://www.udiscovermusic.com/wp-content/uploads/2019/03/Queen-II-album-cover-820.jpg">
-                <h1>Queen II (Deluxe Edition 2011 Remaster)</h1><br>
-
-                <p class="nameOfBand">Queen</p><br>
-                <button>PLAY</button><br>
-                <p class="Year">1974</p>
-                <p class="NumOfSong">16</p><br>
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-     
- <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-      <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-    </svg>
-                </div>
+            <div class="Year">
+                <p>1974 • 16 Songs</p>
             </div>
-            <div class="col-6">
-                <ul>
-                    <li>Procession - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">1:13</p>
-                    <hr>
-                    <li>Father to Son - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">6:14</p>
-                    <hr>
-                    <li>White Queen (As It Began) - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">4:36</p>
-                    <hr>
-                    <li>Some Day One Day - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">4:22</p>
-                    <hr>
-                    <li>The Loser in the End - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">4:04</p>
-                    <hr>
-                    <li>Ogre Battle - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">4:08</p>
-                    <hr>
-                    <li>The Fairy Feller’s Master-Stroke - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">2:41</p>
-                    <hr>
-                    <li>Nevermore - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">1:19</p>
-                    <hr>
-                    <li>March of the Black Queen - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">6:34</p>
-                    <hr>
-                    <li>Funny How Love Is - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">2:50</p>
-                    <hr>
-                    <li>Seven Seas Of Rhye - Remastered 2011</li><br>
-                    <p class="nameOfBand">Queen</p>
-                    <p class="timeOfSong">2:49</p>
-                    <hr>
+            <div class="album-icons mt-4">
+                <ion-icon class="mx-1" name="heart"></ion-icon>
+                <ion-icon class="mx-1" name="ellipsis-horizontal"></ion-icon>
+                <!-- <div>
+                    <a href="#" class="dots d-block-inline">
+                        <div class="dot"></div>
+                    </a>
+                </div> -->
 
-                    <ul>
+
             </div>
         </div>
+        <div class="col-12 col-sm-8 mt-3">
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 d-flex text-white justify-content-end">
+                    <ion-icon class="pt-1 album-note" name="musical-note-outline" style="font-size: 1rem"></ion-icon>
+                </div>
+                <div class="col-9 text-white d-flex flex-column">
+                    <span class="album-songname">Procession - Remastered 2011</span>
+                    <span class="album-artist">Queen</span>
+                </div>
+                <div class="col-2">
+                    <span class="album-songname">1:13</span>
+                </div>
+            </div>
+
+            <!-- <ul>
+                <li>
+
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>Procession - Remastered 2011</li>
+
+                <p class="timeOfSong"></p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>Father to Son - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">6:14</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>White Queen (As It Began) - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:36</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>Some Day One Day - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:22</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>The Loser in the End - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:04</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>Ogre Battle - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">4:08</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>The Fairy Feller’s Master-Stroke - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">2:41</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>Nevermore - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">1:19</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>March of the Black Queen - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">6:34</p>
+                <hr>
+                <li>
+                    <ion-icon class="note" name="musical-note-outline"></ion-icon>Funny How Love Is - Remastered 2011</li>
+                <p class="nameOfBand">Queen</p>
+                <p class="timeOfSong">2:50</p>
+                <hr>
+
+
+            </ul> -->
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const heart = document.getElementById('heart');
+            heart.addEventListener('click', function() {
+                heart.classList.toggle('red');
+            });
+        })();
+    </script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 
 </html>
