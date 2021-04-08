@@ -1,28 +1,36 @@
 const showHomepage = () => {
+
     document.querySelector('.home-section').classList.remove('d-none')
     document.querySelector('.artist-section').classList.add('d-none')
     document.querySelector('.sidebar-footer-with-buttons').classList.remove('d-none')
+    document.querySelector('.sidebar-footer').classList.add('d-none')
     document.querySelector('.album-section').classList.add('d-none')
+    location.reload(true)
+    localStorage.clear()
 }
 
 const showFavoritArtistpage = (event) => {
-    event.preventDefault();
-    console.log("test");
-    window.open('artistpage.html', '_self')
-    setTimeout(() => {
-        console.log("test222");
-        document.querySelector('.sidebar-footer').classList.remove('d-none')
-    }, 200)
-
-}
-
-const login = () => {
+    event.preventDefault()
     localStorage.setItem("LOGGED", "aosdifuaosdifuasodfi")
+    window.open('artistpage.html', '_self')
 }
+
+// const login = () => {
+//     localStorage.setItem("LOGGED", "aosdifuaosdifuasodfi")
+// }
 
 window.onload = function() {
     const isLogged = Boolean(localStorage.getItem("LOGGED"));
-    console.log(isLogged)
+    console.log('isLogged:', isLogged)
+    if (isLogged) {
+        document.querySelector('.artist-section').classList.remove('d-none')
+        document.querySelectorAll('.sidebar-footer')[1].classList.remove('d-none')
+        document.querySelectorAll('.sidebar-footer-with-buttons')[1].classList.add('d-none')
+        document.querySelector('.home-section').classList.add('d-none')
+    } else {
+        document.querySelectorAll('.sidebar-footer')[1].classList.add('d-none')
+        document.querySelectorAll('.sidebar-footer-with-buttons')[1].classList.remove('d-none')
+    }
 }
 
 const showAlbumpage = () => {

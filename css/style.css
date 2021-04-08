@@ -257,7 +257,7 @@ h4 {
 }
 
 .album-songname {
-    color: var(--login-bg-color);
+    color: #F9F9F9;
     font-weight: 600;
 }
 
@@ -291,7 +291,7 @@ h4 {
 .sidebar .sidebar-dropdown {
     visibility: hidden;
     background-color: var(--home-bg-color);
-    top: 9vh;
+    top: 5vh;
     position: absolute;
     /* transition: all 0.2s ease */
 }
@@ -431,6 +431,10 @@ h4 {
     background-image: url("../assets/img/queens_concert.jpg");
     background-repeat: no-repeat;
     background-size: auto;
+}
+
+.artist-albums h3+.row {
+    margin-bottom: 50px;
 }
 
 
