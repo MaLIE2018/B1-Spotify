@@ -1,141 +1,30 @@
-body {
-      
-    color: white;}
+/* Example */
 
 
-    li:hover {
-background-color: rgb(94, 100, 95);
-}
-    .nameOfBand {
-      color: gray;
-      float: left;
-    padding-left: 35px; }
-  
-    ul {
-    list-style-type: none;
-    padding-top: 50px;
-  }
-  img{ display: block;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;}
-  html, body {
-height: 100%;
-}
-
-body {
-background-color: #111312;
-}
-
-.dot, .dot:before, .dot:after {
-position: absolute;
-width: 15px;
-height: 15px;
-border-radius: 20px;
-background-color: #34495e;
-}
-
-.dot {
-top: 50%;
-left: 70%;
-margin-top: -10px;
-margin-left: -10px;
-}
-
-.dot:before, .dot:after {
-content: "";
-}
-
-.dot:before {
-right: 25px;
-transition: right .3s ease-out;
-}
-
-.dot:after {
-left: 25px;
-transition: left .3s ease-out;
-}
-
-.dots:hover .dot:before {
-right: -25px;
-}
-
-.dots:hover .dot:after {
-left: -25px;
-}
-  
-  
-  
-    .timeOfSong{
-      color: gray; 
-      float: right;
-  
-    }
-    h4{ text-align: center;}
-  
-    li{
-        list-style-image: url('note.svg');
-      padding: 10px;
-      color: rgb(236, 221, 221);
-      
-    .icon {
-border: none;
-outline: none;
-cursor: pointer;
-}
+/*------------------------------------*\
+                #sidebar
+\*------------------------------------*/
 
 
-
-    }
-    .icon{
-        border: none;
-outline: none;
-padding: 10px 16px;
-cursor: pointer;
-        text-align:center;
-  position: relative;
-  left: -10%;
-
-  }
-
- h6{
-     text-align: center;
-    padding: -20px;
-margin: -5px;}
-  #heart {
-  
-color: grey;  
-font-size: 30px;
+/* classnames .class example of a modul */
 
 
-}
+/* .sidebar {} 
+.sidebar-title {}
+.sidebar-item {}
+.sidebar-productTitle {}
+.sidebar-removeButton {} */
 
 
+/*------------------------------------*\
+                #footer
+\*------------------------------------*/
 
-#heart.red {
-color: red;
-}
-    .PlayButtonGreen { 
-    width: 100px;
-    height: 30px;
-    border-radius: 30px;
-    background-color: #1DB954;
-    text: white;
-    margin-top: 1% ;
-    display: flex;  
-  justify-content: center;  
-  align-items: center;  
-  
-    }
-    .Year{
-        text-align: center;
-        margin:auto;
-    }
-    .heart{padding: 10px;}
-    .three-dots{padding: 10px;}
-  
-  .note{padding:0 10px 0 0}
+
+/* .footer-playButton{} */
+
+
+/* Example */
 
 
 /*------------------------------------*\
@@ -155,7 +44,6 @@ color: red;
 }
 
 
-
 /*------------------------------------*\
                 #homepage
 \*------------------------------------*/
@@ -167,9 +55,27 @@ color: red;
     font-size: 100%;
 }
 
+.cardHoover {
+    transition: all 0.2s ease-in-out
+}
+
 .cardHoover:hover {
     transform: scale(1.02);
     box-shadow: 5px 6px 14px -2px rgba(33, 145, 99, 0.5);
+}
+
+#img-card:hover .artist-album-card-button {
+    visibility: visible;
+    animation: slide-in-homepage 0.2s ease-in-out forwards;
+}
+
+@keyframes slide-in-homepage {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(74%);
+    }
 }
 
 nav {
@@ -180,7 +86,6 @@ nav {
 #h1 {
     color: white;
 }
-
 
 #img-card {
     padding-left: 7px;
@@ -213,61 +118,162 @@ nav {
 
 
 /*------------------------------------*\
-                #homepage
+                #Album page
 \*------------------------------------*/
 
-#body {
-  font-family: 'Montserrat', sans-serif;
-  background: rgb(10, 16, 23);
-  background: radial-gradient(
-    circle,
-    rgba(10, 16, 23, 1) 0%,
-    rgba(25, 50, 77, 1) 91%
-  );
-  font-size: 100%;
-}
-.cardHoover:hover {
-  transform: scale(1.02);
-  box-shadow: 5px 6px 14px -2px rgba(33, 145, 99, 0.5);
+.albumsongs-section {
+    background: linear-gradient(150deg, rgba(29, 29, 29, 1) 5%, rgba(0, 0, 0, 1) 75%);
 }
 
-nav {
-  letter-spacing: 0.15em;
-  font-size: 9px;
+.albumsongs-section h1 {
+    color: var(--login-bg-color);
+    font-size: 1.5rem;
 }
 
-#img-card {
-  padding-left: 7px;
-  padding-right: 7px;
-  background-color: transparent;
-  border: none;
+.albumsongs-section h6 {
+    color: var(--sidebar-text-color);
 }
 
-#card-text {
-  color: white;
-  font-size: 12px;
-
+.albumsongs-section li:hover {
+    background-color: rgb(94, 100, 95);
 }
 
-#h2 {
-  color: white;
+.nameOfBand {
+    color: gray;
+    float: left;
+    padding-left: 35px;
 }
 
-#underline {
-  /* text-decoration: underline;
-  text-underline-position: under;
-  text-decoration-color: #219163; */
-  border-bottom: 2px solid #219163;
-  padding-bottom: 3px;
+.albumsongs-section ul {
+    list-style-type: none;
 }
-#homeButton {
-  border-left: 2px solid #219163;
+
+.albumsongs-section li {
+    list-style-image: url('note.svg');
+    padding: 10px;
+    color: rgb(236, 221, 221);
 }
+
+.album-img {
+    width: 90%;
+}
+
+.album-icons ion-icon {
+    color: var(--sidebar-text-color);
+}
+
+.dot,
+.dot:before,
+.dot:after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #34495e;
+}
+
+.dot {
+    top: 50%;
+    left: 70%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.dot:before,
+.dot:after {
+    content: "";
+}
+
+.dot:before {
+    right: 25px;
+    transition: right .3s ease-out;
+}
+
+.dot:after {
+    left: 25px;
+    transition: left .3s ease-out;
+}
+
+.dots:hover .dot:before {
+    right: -25px;
+}
+
+.dots:hover .dot:after {
+    left: -25px;
+}
+
+.timeOfSong {
+    color: gray;
+    float: right;
+}
+
+h4 {
+    text-align: center;
+}
+
+.icon {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: -10%;
+}
+
+#heart {
+    color: grey;
+    font-size: 30px;
+}
+
+#heart.red {
+    color: red;
+}
+
+.PlayButtonGreen {
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #1DB954;
+    color: var(--sidebar-text-color);
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Year {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--sidebar-text-color);
+}
+
+.heart {
+    padding: 10px;
+}
+
+.three-dots {
+    padding: 10px;
+}
+
+.album-songname {
+    color: #F9F9F9;
+    font-weight: 600;
+}
+
+.album-artist,
+.album-note {
+    color: var(--sidebar-text-color);
+}
+
+.album-note {
+    font-weight: bold
+}
+
 
 /*------------------------------------*\
                 #sidebar
 \*------------------------------------*/
-
 
 .sidebar {
     background-color: var(--home-bg-color);
@@ -275,8 +281,17 @@ nav {
     font-weight: 700;
     height: 90vh;
 }
-.sidebar {
-    top: 9vh;
+
+.sidebar .navbar-nav .navbar-toggler ion-icon[name="menu-outline"] {
+    color: var(--login-bg-color);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.sidebar .sidebar-dropdown {
+    visibility: hidden;
+    background-color: var(--home-bg-color);
+    top: 5vh;
     position: absolute;
     /* transition: all 0.2s ease */
 }
@@ -303,7 +318,6 @@ nav {
 
 .sidebar ul li span {
     color: var(--sidebar-text-color);
-
 }
 
 .sidebar ul li span:hover {
@@ -336,6 +350,20 @@ nav {
     font-weight: 500;
 }
 
+.sidebar li.nav-item {
+    position: relative;
+}
+
+.sidebar li.nav-item:hover ::before {
+    content: '';
+    position: absolute;
+    /* width: 10px; */
+    left: -22px;
+    height: 100%;
+    border-left: 5px solid var(--spotify-color);
+}
+
+
 /*------------------------------------*\
                 #player
 \*------------------------------------*/
@@ -344,11 +372,8 @@ nav {
     margin-left: -15px;
     margin-right: -15px;
     height: 10vh;
-    position: sticky;
-    bottom: 0;
     background-color: var(--footer-bg-color);
 }
-
 
 .player-controls {
     color: var(--sidebar-text-color);
@@ -365,7 +390,6 @@ nav {
     white-space: nowrap;
     overflow: hidden;
 }
-
 
 .player .player-progress-divider {
     height: 2px;
@@ -404,11 +428,15 @@ nav {
     width: 100%;
     height: 100%;
     opacity: 0.4;
-
     background-image: url("../assets/img/queens_concert.jpg");
     background-repeat: no-repeat;
     background-size: auto;
 }
+
+.artist-albums h3+.row {
+    margin-bottom: 50px;
+}
+
 
 /* Header */
 
@@ -427,6 +455,7 @@ nav {
 
 .artist-nav {
     z-index: 5;
+}
 
 .artist-albums::before {
     content: '';
@@ -453,12 +482,10 @@ nav {
     transition: all 0.2s ease;
 }
 
-
 .artist-followButton:hover {
     background-color: var(--sidebar-text-color);
     transform: scale(1.05);
 }
-
 
 .artist-playButton {
     color: var(--login-bg-color);
@@ -520,16 +547,15 @@ nav {
 }
 
 @keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
- }
-
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes slide-in-bottom {
     0% {
@@ -570,6 +596,10 @@ section.artist-albums h3 {
 
 /* End Album */
 
+.iframe-section {
+    height: 90vh;
+}
+
 
 /*------------------------------------*\
                 #media queries
@@ -606,8 +636,10 @@ section.artist-albums h3 {
     .player-progress-divider {
         width: 75vw;
     }
+    .iframe-section {
+        height: 76vh;
+    }
 }
-
 
 @media (max-width: 576px) {
     .sidebar {
@@ -619,7 +651,6 @@ section.artist-albums h3 {
     .player-progress-divider {
         width: 75vw;
     }
-
     .artist-header h1 {
         font-size: 36px;
     }
@@ -627,8 +658,8 @@ section.artist-albums h3 {
         font-size: 0.7rem;
     }
 }
-  
-  @media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
     #h1 {
         font-size: 20px;
     }
