@@ -350,11 +350,11 @@ h4 {
     font-weight: 500;
 }
 
-.sidebar li.nav-item {
+.sidebar .sidebar-top-nav li.nav-item {
     position: relative;
 }
 
-.sidebar li.nav-item:hover ::before {
+.sidebar .sidebar-top-nav li.nav-item:hover ::before {
     content: '';
     position: absolute;
     /* width: 10px; */
