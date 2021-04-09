@@ -45,11 +45,115 @@
 
 
 /*------------------------------------*\
+                #Login
+\*------------------------------------*/
+
+.login {
+    margin-right: 35%;
+    margin-left: 35%;
+}
+
+.login .login-submitbutton {
+    width: 40%;
+    background-color: var(--spotify-color);
+    color: var(--login-bg-color);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    border: 0;
+}
+
+.customCheckboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: var(--spotify-color);
+}
+
+.login .greenText {
+    color: var(--spotify-color);
+}
+
+.login-signInButton {
+    background-color: var(--login-bg-color);
+    border: 2px solid #626264;
+    font-weight: 600;
+}
+
+.login-disclaimer {
+    font-size: 0.5rem;
+    color: var(--sidebar-text-color);
+}
+
+
+/* On mouse-over, add a grey background color */
+
+
+/* .customCheckboxContainer:hover input~.checkmark {
+    background-color: var(--spotify-color);
+} */
+
+
+/* When the checkbox is checked, add a blue background */
+
+.customCheckboxContainer input:checked~.checkmark {
+    background-color: var(--spotify-color);
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.customCheckboxContainer .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.customCheckboxContainer input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.customCheckboxContainer .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate( 24deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(32deg);
+}
+
+.customCheckboxContainer .checkboxText {
+    position: absolute;
+    left: 31px;
+}
+
+
+/*------------------------------------*\
                 #homepage
 \*------------------------------------*/
 
 #body {
-    font-family: 'Montserrat', sans-serif;
     background: rgb(10, 16, 23);
     background: radial-gradient( circle, rgba(10, 16, 23, 1) 0%, rgba(25, 50, 77, 1) 91%);
     font-size: 100%;
@@ -64,21 +168,20 @@
     box-shadow: 5px 6px 14px -2px rgba(33, 145, 99, 0.5);
 }
 
+.artist-album-card-button {
+    visibility: hidden;
+    background-color: var(--spotify-color);
+    bottom: 27%;
+    right: 8%;
+    position: absolute;
+}
+
 #img-card:hover .artist-album-card-button {
     visibility: visible;
     animation: slide-in-homepage 0.2s ease-in-out forwards;
 }
 
-@keyframes slide-in-homepage {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(74%);
-    }
-}
-
-nav {
+#navbarNavAltMarkup .navbar-nav {
     letter-spacing: 0.15em;
     font-size: 9px;
 }
@@ -103,13 +206,15 @@ nav {
     color: white;
 }
 
-#underline {
-    /* text-decoration: underline;
-  text-underline-position: under;
-
-  text-decoration-color: #219163; */
-    border-bottom: 2px solid #219163;
-    padding-bottom: 3px;
+.homepage .navbar-nav a.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 40%;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 2px solid var(--spotify-color);
 }
 
 #homeButton {
@@ -132,10 +237,6 @@ nav {
 
 .albumsongs-section h6 {
     color: var(--sidebar-text-color);
-}
-
-.albumsongs-section li:hover {
-    background-color: rgb(94, 100, 95);
 }
 
 .nameOfBand {
@@ -162,6 +263,26 @@ nav {
     color: var(--sidebar-text-color);
 }
 
+
+/* Dot animations */
+
+.dot {
+    top: 50%;
+    left: 96px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.dots {
+    width: 80px;
+    height: 15px;
+}
+
+.dot:before,
+.dot:after {
+    content: "";
+}
+
 .dot,
 .dot:before,
 .dot:after {
@@ -172,35 +293,53 @@ nav {
     background-color: #34495e;
 }
 
-.dot {
-    top: 50%;
-    left: 70%;
-    margin-top: -10px;
-    margin-left: -10px;
-}
-
-.dot:before,
-.dot:after {
-    content: "";
-}
-
 .dot:before {
     right: 25px;
-    transition: right .3s ease-out;
+    /* transition: right .5s ease-out; */
 }
 
 .dot:after {
     left: 25px;
-    transition: left .3s ease-out;
+    /* transition: left .5s ease-out; */
 }
 
-.dots:hover .dot:before {
+
+/* .dots:hover .dot:before {
     right: -25px;
 }
 
 .dots:hover .dot:after {
     left: -25px;
+} */
+
+.dots:hover .dot:before {
+    animation: slide-right 0.6s cubic-bezier(.82, .84, .63, .6) 4;
 }
+
+.dots:hover .dot:after {
+    animation: slide-left 0.6s cubic-bezier(.82, .84, .63, .6) 4;
+}
+
+@keyframes slide-left {
+    0% {
+        left: 25px;
+    }
+    100% {
+        left: -25px;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        right: 25px;
+    }
+    100% {
+        right: -25px;
+    }
+}
+
+
+/* End Dot animations */
 
 .timeOfSong {
     color: gray;
@@ -209,6 +348,10 @@ nav {
 
 h4 {
     text-align: center;
+}
+
+.album-songrow:hover {
+    background-color: rgb(94, 100, 95);
 }
 
 .icon {
@@ -221,13 +364,14 @@ h4 {
     left: -10%;
 }
 
-#heart {
-    color: grey;
-    font-size: 30px;
+body>div>div.col-12.col-sm-4.d-flex.flex-column.align-items-center.mt-3>div.album-icons.mt-4.d-flex.align-items-center.position-relative>ion-icon {
+    color: #34495e;
+    transition: all 15s ease-in-out
 }
 
-#heart.red {
+body>div>div.col-12.col-sm-4.d-flex.flex-column.align-items-center.mt-3>div.album-icons.mt-4.d-flex.align-items-center.position-relative>ion-icon:active {
     color: red;
+    transform: scale(100)
 }
 
 .PlayButtonGreen {
@@ -267,7 +411,8 @@ h4 {
 }
 
 .album-note {
-    font-weight: bold
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 
@@ -621,6 +766,9 @@ section.artist-albums h3 {
     .sidebar .navbar-nav li span {
         font-size: 0.8rem;
     }
+    .sidebar .sidebar-button {
+        font-size: 0.8rem;
+    }
     .player-progress-divider {
         width: 300px;
     }
@@ -656,6 +804,29 @@ section.artist-albums h3 {
     }
     .artist-header h5 {
         font-size: 0.7rem;
+    }
+    @keyframes slide-in-homepage {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(73%);
+        }
+    }
+    .login {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    @keyframes slide-in-homepage {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(30%);
+        }
     }
 }
 
