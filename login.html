@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container-fluid flex-column p-0">
+    <div class="container-fluid flex-column p-0 h-100">
         <div class="row w-100 m-0">
             <div class="col p-0">
                 <hr class="d-block" style="width:100%;text-align:left;margin-left:0">
@@ -29,15 +29,15 @@
             <div class="col d-flex flex-column justify-content-center">
                 <div class="row flex-column m-1">
                     <span class="text-center font-weight-bolder">To continue, log in to Spotify.</span>
-                    <button type="button" class="btn rounded-pill mt-2" style="background-color:#405C9C;color: var(--login-bg-color);"><ion-icon name="logo-facebook"></ion-icon></i> CONTINUE WITH FACEBOOK</button>
-                    <button type="button" class="btn btn-dark rounded-pill mt-2"><ion-icon name="logo-apple"></ion-icon></i> CONTINUE WITH APPLE</button>
+                    <button type="button" class="btn rounded-pill mt-2 login-buttons" style="background-color:#405C9C;color: var(--login-bg-color);"><ion-icon name="logo-facebook"></ion-icon></i> CONTINUE WITH FACEBOOK</button>
+                    <button type="button" class="btn btn-dark rounded-pill mt-2 login-buttons"><ion-icon name="logo-apple"></ion-icon></i> CONTINUE WITH APPLE</button>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="d-flex flex-row align-items-center">
                             <hr class="d-block" style="width:100%;text-align:left;margin-left:0">
                             <div class="d-flex justify-content-center">
-                                <span class="text-center font-weight-bolder mx-2">or</span>
+                                <span class="text-center font-weight-bolder mx-4">OR</span>
                             </div>
                             <hr class="d-block" style="width:100%;text-align:left;margin-left:0">
                         </div>
@@ -61,7 +61,7 @@
                                      </label>
                                 </div>
 
-                                <button type="button" class="login-submitbutton btn rounded-pill ml-auto" onclick="showFavoritArtistpage(event)">LOG IN</button>
+                                <button type="button" class="login-submitbutton btn rounded-pill ml-auto login-buttons" onclick="showFavoritArtistpage(event)">LOG IN</button>
                             </div>
                             <span class="d-block text-center greenText">Forgot your password?</span>
                         </form>
@@ -82,6 +82,7 @@
                 </div>
             </div>
         </div>
+        <div class="row sticky-bottom d-flex m-0"><img class="ml-auto mr-4" src="./assets/img/recaptcha.png" alt="" width="50px"></div>
     </div>
 
 
