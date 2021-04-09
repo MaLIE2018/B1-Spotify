@@ -162,45 +162,7 @@ nav {
     color: var(--sidebar-text-color);
 }
 
-.dot,
-.dot:before,
-.dot:after {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border-radius: 20px;
-    background-color: #34495e;
-}
 
-.dot {
-    top: 50%;
-    left: 70%;
-    margin-top: -10px;
-    margin-left: -10px;
-}
-
-.dot:before,
-.dot:after {
-    content: "";
-}
-
-.dot:before {
-    right: 25px;
-    transition: right .3s ease-out;
-}
-
-.dot:after {
-    left: 25px;
-    transition: left .3s ease-out;
-}
-
-.dots:hover .dot:before {
-    right: -25px;
-}
-
-.dots:hover .dot:after {
-    left: -25px;
-}
 
 .timeOfSong {
     color: gray;
