@@ -12,7 +12,7 @@ const showHomepage = () => {
 const showFavoritArtistpage = (event) => {
     event.preventDefault()
     localStorage.setItem("LOGGED", "aosdifuaosdifuasodfi")
-    window.open('artistpage.html', '_self')
+    window.open('index.html', '_self')
 }
 
 // const login = () => {

@@ -53,13 +53,16 @@
     margin-left: 35%;
 }
 
+.login-buttons {
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+}
+
 .login .login-submitbutton {
     width: 40%;
     background-color: var(--spotify-color);
     color: var(--login-bg-color);
-    font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
     border: 0;
 }
 
