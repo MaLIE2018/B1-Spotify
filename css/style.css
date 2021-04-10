@@ -502,7 +502,7 @@ body>div>div.col-12.col-sm-4.d-flex.flex-column.align-items-center.mt-3>div.albu
     position: relative;
 }
 
-.sidebar .sidebar-top-nav li.nav-item:hover ::before {
+.sidebar .sidebar-top-nav li.nav-item:nth-child(n+2):hover ::before {
     content: '';
     position: absolute;
     /* width: 10px; */
