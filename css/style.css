@@ -759,12 +759,6 @@ section.artist-albums h3 {
     }
 }
 
-@media screen and (min-height: 901px) {
-    .player {
-        padding-top: 1vh;
-    }
-}
-
 @media (max-width: 962px) {
     .sidebar .navbar-nav li span {
         font-size: 0.8rem;
@@ -789,18 +783,6 @@ section.artist-albums h3 {
     }
     .iframe-section {
         height: 76vh;
-    }
-}
-
-@media (max-width: 576px) {
-    .sidebar {
-        height: 9vh;
-    }
-    .player {
-        height: 15vh;
-    }
-    .player-progress-divider {
-        width: 75vw;
     }
     .artist-header h1 {
         font-size: 36px;
