@@ -439,7 +439,8 @@ body>div>div.col-12.col-sm-4.d-flex.flex-column.align-items-center.mt-3>div.albu
 .sidebar .sidebar-dropdown {
     visibility: hidden;
     background-color: var(--home-bg-color);
-    top: 5vh;
+    top: 7vh;
+    left:0;
     position: absolute;
     /* transition: all 0.2s ease */
 }
@@ -456,7 +457,7 @@ body>div>div.col-12.col-sm-4.d-flex.flex-column.align-items-center.mt-3>div.albu
 @keyframes slide-in-top {
     0% {
         opacity: 0;
-        transform: translateY(100)
+        transform: translateY(100%)
     }
     100% {
         opacity: 1;
