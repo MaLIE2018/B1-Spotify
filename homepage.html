@@ -120,8 +120,10 @@
     <!-- cards -->
     <script>
       //mycodehere!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      const getToAlbumpage = (id) => {
+      const getToAlbumpage = (id,img,albumname) => {
         sessionStorage.setItem("id",id)
+        sessionStorage.setItem("albumname",albumname)
+        sessionStorage.setItem("img",img)
         window.location.href = "albumpage.html"
       }
 
@@ -142,11 +144,6 @@
           .then((jsonobj) => {
             console.log(jsonobj);
             let dataArray = jsonobj.data;
-            // let albums = dataArray.reduce((acc,curr)=>{
-            //   if(acc[curr.album.id] === null){
-            //     return [...acc,curr.album]
-            //   }
-            // },[])
             let albums = []
             dataArray.forEach(function(album){
                 var i = albums.findIndex(x => x.id === album.album.id)
@@ -154,13 +151,12 @@
                   albums.push({id: album.album.id, cover: album.album.cover_big, title: album.album.title})
                 }
             })            
-            
             const myDiv = document.getElementById('albums');
             myDiv.innerHTML = albums.map((album) => {
                     return  `<div
                               id="img-card"
                               class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                              <a href="#" id=${album.id} onclick="getToAlbumpage(this.id)">
+                              <a href="#" id=${album.id} onclick="getToAlbumpage(this.id, this.closest('.card').querySelector('.cardHoover').src, this.closest('.card').querySelector('#card-text').innerHTML)">
                               <img
                                 class="img-fluid cardHoover"
                                 src="${album.cover}"
@@ -173,8 +169,7 @@
                               <button class="artist-album-card-button btn rounded-circle">
                                 <ion-icon class="text-white" name="play"></ion-icon>
                               </button>
-                            </a>
-                </div>`}).join(''); }) .catch((err) => console.log(err.message)); };
+                            </a></div>`}).join(''); }) .catch((err) => console.log(err.message)); };
                 </script>
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

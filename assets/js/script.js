@@ -66,7 +66,7 @@ const createAlbums = (searchResults) => {
     uniqueAlbum.forEach((album) => {
         albumRow.innerHTML +=
             `<div class="col-12 col-sm-6 col-md-4">
-                <a href="" onclick="getToAlbumpage(this.id)" id="${album.id}">
+                <a href="#" id="${album.id}" onclick="getToAlbumpage(this.id, this.querySelector('.cardHoover').src, this.querySelector('.card-body').innerHTML)">
                     <div id="img-card" class="card">
                         <img class="img-fluid cardHoover" src="${album.cover}" alt="" />
                         <span id="card-text" class="card-body d-flex justify-content-center pt-2">${album.title}</span>
@@ -77,11 +77,14 @@ const createAlbums = (searchResults) => {
     })
 }
 
-const getToAlbumpage = (id) => {
+const getToAlbumpage = (id, img, albumname) => {
     sessionStorage.setItem("id", id)
-    console.log(document.querySelector('.search-section'));
-    document.querySelector('.search-section').classList.add('d-none')
-    document.querySelector('.album-section').classList.remove('d-none')
+    sessionStorage.setItem("albumname", albumname)
+    sessionStorage.setItem("img", img)
+    window.location.href = "albumpage.html"
+        // console.log(document.querySelector('.search-section'));
+        // document.querySelector('.search-section').classList.add('d-none')
+        // document.querySelector('.album-section').classList.remove('d-none')
 }
 
 const playMusic = (event, url) => {
@@ -143,6 +146,7 @@ window.onload = function() {
 }
 
 const showAlbumpage = () => {
+
     document.querySelector('.artist-section').classList.add('d-none')
     document.querySelector('.album-section').classList.remove('d-none')
 

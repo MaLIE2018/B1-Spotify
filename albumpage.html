@@ -15,13 +15,13 @@
     <title>Spotify</title>
 </head>
 
-<body>
+<body style="background-color:black">
     <div class="albumsongs-section row pb-3">
-        <div class="col-12 col-sm-4 d-flex flex-column align-items-center mt-3">
-            <img class="album-img" src="./assets/img/queen3.jpg" />
-            <h1 class="text-center">Queen II (Deluxe Edition 2011 Remaster)</h1>
+        <div class="col-12 col-sm-4 d-flex flex-column align-items-center mt-5">
+            <img class="album-img" src="" alt="albumcover" />
+            <h1 class="album-title text-center mt-2">Queen II (Deluxe Edition 2011 Remaster)</h1>
 
-            <h6>Queen</h6>
+            <h6 class="artist">Queen</h6>
             <button class="button artist-playButton btn rounded-pill my-3 mt-3 w-50">
           PLAY
         </button>
@@ -50,35 +50,46 @@
         let id = sessionStorage.getItem('id');
         console.log(id);
         window.onload = () => {
-            fetch(
-                    'https://striveschool-api.herokuapp.com/api/deezer/album/75621062'
-                )
+            fetch(`https://deezerdevs-deezer.p.rapidapi.com/album/${id}`, {
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-key": "3e0ee43bffmsh46314b57fd57dc1p16035fjsn04092eace9f0",
+                        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+                    }
+                })
                 .then((resp) => resp.json())
                 .then((books) => {
                     let tracks = books.tracks.data
+                    console.log('tracks:', tracks)
                     const myDiv = document.querySelector('.special');
 
                     myDiv.innerHTML = tracks
                         .map(
-                            (track) => `<div class="album-songrow row flex-nowrap mx-1">
-          <div
-            class="col-1 text-white d-inline-block d-md-flex justify-content-start justify-content-md-end"
-          >
-            <ion-icon
-              class="pt-1 album-note"
-              name="musical-note-outline"
-            ></ion-icon>
-          </div>
-          <div class="col-9 text-white d-flex flex-column">
-            <span class="album-songname">${track.title}</span>
-            <span class="album-artist">${track.artist.name}</span>
-          </div>
-          <div class="col-2">
-            <span class="album-songname">${track.duration}</span>
-          </div>
-        </div>`
+                            (track) => {
+                                document.querySelector(".album-title").innerHTML = sessionStorage.getItem('albumname')
+                                document.querySelector(".artist").innerHTML = track.artist.name
+                                document.querySelector(".album-img").src = sessionStorage.getItem('img')
+                                return `<div class="album-songrow row flex-nowrap mx-1">
+                                        <div
+                                            class="col-1 text-white d-inline-block d-md-flex justify-content-start justify-content-md-end"
+                                        >
+                                            <ion-icon
+                                            class="pt-1 album-note"
+                                            name="musical-note-outline"
+                                            ></ion-icon>
+                                        </div>
+                                        <div class="col-9 text-white d-flex flex-column">
+                                            <span class="album-songname">${track.title}</span>
+                                            <a href="#"><span class="album-artist">${track.artist.name}</span></a>
+                                        </div>
+                                        <div class="col-2">
+                                            <span class="album-songname">${track.duration}</span>
+                                        </div>
+                                        </div>`
+                            }
                         )
                         .join('');
+
                 });
         };
 
@@ -88,6 +99,7 @@
         //       heart.classList.toggle('red');
         //     });
     </script>
+
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
