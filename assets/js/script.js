@@ -75,7 +75,6 @@ const createAlbums = (searchResults) => {
                 </a>
             </div>`
     })
-
 }
 
 const getToAlbumpage = (id) => {
