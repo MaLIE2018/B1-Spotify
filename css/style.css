@@ -153,6 +153,20 @@
 
 
 /*------------------------------------*\
+                #Search
+\*------------------------------------*/
+
+.songlist li {
+    color: var(--sidebar-text-color)
+}
+
+.songlist {
+    height: 50vh;
+    overflow: scroll;
+}
+
+
+/*------------------------------------*\
                 #homepage
 \*------------------------------------*/
 
@@ -440,7 +454,7 @@ body>div>div.col-12.col-sm-4.d-flex.flex-column.align-items-center.mt-3>div.albu
     visibility: hidden;
     background-color: var(--home-bg-color);
     top: 10vh;
-    left:0;
+    left: 0;
     position: absolute;
     /* transition: all 0.2s ease */
 }
