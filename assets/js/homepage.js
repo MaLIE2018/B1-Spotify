@@ -11,7 +11,6 @@ const createAlbums = (jsonobj) => {
         }
     })
     const myDiv = document.getElementById('albums');
-    console.log(dataArray);
     myDiv.innerHTML = albums.map((album) => {
         return `<div
                   id="img-card"
@@ -36,7 +35,7 @@ const createAlbums = (jsonobj) => {
     [...myDiv.children].forEach((el) => el.querySelector("a").onclick = () =>
         Module.getToAlbumpage(el.querySelector("a").id,
             el.closest('.card').querySelector('.cardHoover').src,
-            el.closest('.card').querySelector('#card-text').innerHTML,
+            el.closest('.card').querySelector('#card-text p').innerHTML,
             el.closest('.card').querySelector('.artistlink').id)
     )
 }

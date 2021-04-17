@@ -27,34 +27,52 @@ const retrieveData = (input) => {
 const createAlbums = (searchResults) => {
     albumRow.innerHTML = ''
     let uniqueAlbum = []
+    console.log(searchResults)
     searchResults.forEach((song) => {
         let i = uniqueAlbum.findIndex((x) => {
             return x.id === song.album.id
         })
         if (i <= -1) {
-            uniqueAlbum.push({ id: song.album.id, cover: song.album.cover_medium, title: song.album.title })
+            uniqueAlbum.push({ id: song.album.id, cover: song.album.cover_medium, title: song.album.title, name: song.artist.name, artistid: song.artist.id })
         }
     })
+
     uniqueAlbum.forEach((album) => {
         albumRow.innerHTML +=
-            `<div class="col-12 col-sm-6 col-md-4">
-                <a href="#" id="${album.id}" >
-                    <div id="img-card" class="card">
-                        <img class="img-fluid cardHoover" src="${album.cover}" alt="" />
-                        <span id="card-text" class="card-body d-flex justify-content-center pt-2">${album.title}</span>
-                        <button class="artist-album-card-button songlist-playbutton btn rounded-circle" onclick=""><ion-icon class="text-white"name="play"></ion-icon></button>
-                    </div>
-                </a>
+            `<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex mt-3">
+                <div class="artist-album-card card align-self-stretch">
+                        <a href="" id='${album.id}' class="">
+                            <div class="artist-album-img-container">
+                                <img src="${album.cover}" class="card-img-top p-3" alt="...">
+                            </div>
+                            <div class="card-body d-flex justify-content-center justify-self-end">
+                                <button class="artist-album-card-button btn rounded-circle"><ion-icon class="text-white"name="play"></ion-icon></button>
+                                <p class="card-text d-flex flex-column">
+                                    <span class="artist-album-card-albumTitle text-center">${album.title}</span>
+                                    <a href="" id="${album.artistid}">
+                                    <span class="artist-album-card-subTitle text-center">${album.name}</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </a>
+                </div>
             </div>`
     });
-    [...albumRow.children].forEach((el) => el.querySelector("a").onclick = () => {
-        return Module.getToAlbumpage(el.querySelector("a").id, el.querySelector('.cardHoover').src, el.querySelector('.card-body').innerHTML);
-    })
+    [...albumRow.children].forEach((el) => el.querySelector("a").onclick = () =>
+        Module.getToAlbumpage(el.querySelector("a").id,
+            el.querySelector('img').src,
+            el.querySelector('.artist-album-card-albumTitle').innerText,
+            el.querySelector(".card-text a").id));
+    //links artists
+    [...albumRow.children].forEach((el) => el.querySelector(".card-text a:not(:first-child)").onclick = () =>
+        Module.showArtistpage(el.querySelector(".card-text a:not(:first-child)").id,
+            el.querySelector('.card-img-top').src,
+            el.querySelector('.artist-album-card-albumTitle').innerText));
+
 }
 
 const createList = (searchResults) => {
     songlist.innerHTML = ''
-    console.log(searchResults);
     searchResults.forEach((song) => {
         songlist.innerHTML +=
             `<li class="list-group-item bg-transparent">
@@ -72,8 +90,11 @@ const createList = (searchResults) => {
                         </div>
                     </div>
                 </li>`
+    });
+    //links albums
+    [...songlist.children].forEach((el) => el.querySelector("a").onclick = () => {
+        return Module.getToAlbumpage(el.querySelector("a").id, el.querySelector('.cardHoover').src, el.querySelector('.card-body').innerHTML);
     })
-
 
 }
 

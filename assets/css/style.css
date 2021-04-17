@@ -578,7 +578,7 @@ body>div>div.col-12.col-sm-4.d-flex.flex-column.align-items-center.mt-3>div.albu
                 #Artist page
 \*------------------------------------*/
 
-.artist-section {
+.artist-section-container {
     background-color: var(--artist-section-bg-color);
 }
 

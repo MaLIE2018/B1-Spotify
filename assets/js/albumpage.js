@@ -1,4 +1,4 @@
-const createArtistAblums = (album) => {
+const createArtistAlbums = (album) => {
     let tracks = album.tracks.data
     const myDiv = document.querySelector('.special');
     myDiv.innerHTML = tracks
@@ -29,6 +29,7 @@ const createArtistAblums = (album) => {
         )
         .join('');
 
+
 }
 
 const retrieveData = (id) => {
@@ -50,5 +51,4 @@ const retrieveData = (id) => {
 window.onload = () => {
     let id = sessionStorage.getItem('id');
     retrieveData(id)
-    console.log("Albumpageload");
 };
