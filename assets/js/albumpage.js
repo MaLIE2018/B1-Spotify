@@ -28,8 +28,6 @@ const createArtistAblums = (album) => {
             }
         )
         .join('');
-    [...myDiv.children].forEach((el) => el.querySelector("a").onclick = () =>
-        Module.getToArtistPage(el.querySelector("a").id, el.closest('.card').querySelector('.cardHoover').src, el.closest('.card').querySelector('#card-text').innerHTML))
 
 }
 
