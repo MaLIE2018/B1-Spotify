@@ -1,4 +1,5 @@
 import * as NavigationModule from '../modules/navigation.js'
+import * as HelperModule from '../modules/helper.js'
 
 //Get unique albums in a query search and artist fetch
 export const uniqueAlbums = (data) => {
@@ -70,7 +71,7 @@ export const createTracklist = (albumtracks, myDiv) => {
                     </div>
                     <div class="col-1 text-white d-inline-block d-md-flex">
                         <button class="btn btn-outline-light rounded-circle songlist-playbutton" ]
-                                onclick="playMusic(event,'${track.preview}')">
+                                onclick="HelperModule.playMusic(event,'${track.preview}')">
                                 <ion-icon class="songlist-stopbutton d-none" name="pause-outline"></ion-icon>
                                 <ion-icon class="songlist-playbutton" name="play-outline"></ion-icon>
                         </button>   
@@ -84,7 +85,27 @@ export const createTracklist = (albumtracks, myDiv) => {
                     </div>
                 </div>`
     }).join('');
-    // [...myDiv.children].forEach((el) => el.querySelector("a").onclick = () => {
-    //     return NavigationModule.getToAlbumpage(el.querySelector("a").id, el.querySelector('.cardHoover').src, el.querySelector('.card-body').innerHTML);
-    // })
+    [...myDiv.children].forEach((el) => el.querySelector("a").onclick = () => {
+        return NavigationModule.getToAlbumpage(el.querySelector("a").id, el.querySelector('.cardHoover').src, el.querySelector('.card-body').innerHTML);
+    })
+}
+
+
+export const playMusic = (event, url) => {
+    if (event.currentTarget.children[0].classList.contains("d-none")) { //stopbutton [0]
+        if (event.currentTarget.children[1].classList.contains("played")) {
+            audio.play()
+        } else {
+            audio = new Audio(url)
+            audio.play()
+        }
+        event.currentTarget.children[1].classList.add("d-none")
+        event.currentTarget.children[1].classList.add("played") // playbutton[]
+        event.currentTarget.children[0].classList.remove("d-none")
+    } else {
+        audio.pause()
+        event.currentTarget.children[1].classList.remove("d-none")
+        event.currentTarget.children[0].classList.add("d-none")
+    }
+    // 
 }

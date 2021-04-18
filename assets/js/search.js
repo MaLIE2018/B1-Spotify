@@ -18,5 +18,4 @@ async function createPage(input) {
 
 window.onload = () => {
     searchField.onkeyup = function() { createPage(this) }
-    console.log("Searchpageload");
 }

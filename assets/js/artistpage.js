@@ -11,7 +11,7 @@ async function createArtistpage() {
 }
 
 const fillArtistDetails = (artistdata) => {
-    // document.querySelector(".artist-header:before").style.backgroundImage = url(`${artistdata.picture_xl}`)
+    document.querySelector(".artist-header").style.backgroundImage = `url(${artistdata.picture_xl})`
     document.querySelector(".artistpage-artist-title").innerHTML = artistdata.name
     document.querySelector('.fancount').innerHTML = artistdata.nb_fan
 }
