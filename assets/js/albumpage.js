@@ -12,15 +12,19 @@ async function createArtistpage() {
 
 const fillArtist = (album) => {
     let tracks = album.tracks.data
-    document.querySelector(".album-title").innerHTML = sessionStorage.getItem('albumname')
+    document.querySelector(".album-title").innerHTML = album.title
     document.querySelector(".artist").innerHTML = tracks[0].artist.name
     document.querySelector(".artist").parentElement.id = tracks[0].artist.id
     document.querySelector(".trackcount").innerHTML = album.nb_tracks
     document.querySelector(".albumyear").innerHTML = album.release_date.split("-")[0]
     document.querySelector(".album-img").src = sessionStorage.getItem('img')
+    document.querySelector(".albumsongs-section-artistlink").id = tracks[0].artist.id
 }
 
 
 window.onload = () => {
     createArtistpage()
+    document.querySelector(".albumsongs-section-artistlink").addEventListener('click', () =>
+        NavigationModule.showArtistpage(document.querySelector(".albumsongs-section-artistlink").id))
+
 };

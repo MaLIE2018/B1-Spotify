@@ -11,9 +11,10 @@ async function createPage(input) {
     if (input.value.length > 4) {
         let searchurl = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${input.value}`
         data = await FetchModule.retrieveData(searchurl)
+        HelperModule.createTracklist(HelperModule.getTracks(data.data), document.querySelector('.search-songlist'))
+        HelperModule.createAlbums(HelperModule.uniqueAlbums(data.data), document.querySelector('.album-row'))
     }
-    HelperModule.createTracklist(HelperModule.getTracks(data.data), document.querySelector('.search-songlist'))
-    HelperModule.createAlbums(HelperModule.uniqueAlbums(data.data), document.querySelector('.album-row'))
+
 }
 
 window.onload = () => {

@@ -13,6 +13,8 @@ export const retrieveData = (url) => {
             .then((data) => {
                 resolve(data)
             })
-            .catch((err) => console.log(err.message, err));
+            .catch((err) => console.log(err.message, err)) // could show an alert! that is smart
+            .finally(() => { console.log("Stuff is loaded!"); }) // could set display:none for loader {spinner}
     })
+
 }
