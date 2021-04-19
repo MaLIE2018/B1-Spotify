@@ -66,24 +66,24 @@ export const createAlbums = (uniqueAlbums, myDiv) => {
 export const createTracklist = (albumtracks, myDiv) => {
     myDiv.innerHTML = albumtracks.map((track) => {
         return `<div class="album-songrow row flex-nowrap mx-1 my-1">
-                    <div class="col-1 text-white d-inline-block d-md-flex justify-content-start justify-content-md-end">
-                        <ion-icon class="pt-1 album-note" name="musical-note-outline"></ion-icon>
-                    </div>
-                    <div class="col-1 text-white d-inline-block d-md-flex">
-                        <button class="btn btn-outline-light rounded-circle songlist-playbutton" ]
-                                onclick="HelperModule.playMusic(event,'${track.preview}')">
-                                <ion-icon class="songlist-stopbutton d-none" name="pause-outline"></ion-icon>
-                                <ion-icon class="songlist-playbutton" name="play-outline"></ion-icon>
-                        </button>   
-                    </div>
-                    <div class="col-9 text-white d-flex flex-column">
-                        <span class="album-songname">${track.title}</span>
-                        <a href="#" id="${track.artist.id}"><span class="album-artist">${track.artist.name}</span></a>
-                    </div>
-                    <div class="col-1">
-                        <span class="album-songname">${(parseFloat(track.duration)/60).toFixed(2).split(".").join(":")}</span>
-                    </div>
-                </div>`
+    <div class="col-1 text-white d-inline-block d-md-flex justify-content-start justify-content-md-end">
+        <ion-icon class="pt-1 album-note" name="musical-note-outline"></ion-icon>
+    </div>
+    <div class="col-1 text-white d-inline-block d-md-flex">
+        <button class="btn btn-outline-light rounded-circle songlist-playbutton" ]
+                onclick="HelperModule.playMusic(event,'${track.preview}')">
+                <ion-icon class="songlist-stopbutton d-none" name="pause-outline"></ion-icon>
+                <ion-icon class="songlist-playbutton" name="play-outline"></ion-icon>
+        </button>   
+    </div>
+    <div class="col-9 text-white d-flex flex-column">
+        <span class="album-songname">${track.title}</span>
+        <a href="#" id="${track.artist.id}"><span class="album-artist">${track.artist.name}</span></a>
+    </div>
+    <div class="col-1">
+        <span class="album-songname">${(parseFloat(track.duration)/60).toFixed(2).split(".").join(":")}</span>
+    </div>
+</div>`
     }).join('');
     [...myDiv.children].forEach((el) => el.querySelector("a").onclick = () => {
         return NavigationModule.getToAlbumpage(el.querySelector("a").id, el.querySelector('.cardHoover').src, el.querySelector('.card-body').innerHTML);
